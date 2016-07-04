@@ -14,15 +14,7 @@ import schedule
 import time
 from requests import get
 from config import APPID, APPSECRET
-
-
-def get_access_token():
-    """
-    读取微信开放平台 access_token
-    """
-    with open('access_token', 'r') as f:
-        access_token = f.read()
-    return access_token
+from tools.wechat import get_access_token, get_jsapi_ticket
 
 
 def update_access_token():

@@ -21,19 +21,8 @@ Web Interface                 127.0.0.1:4040
 Avg Conn Time                 388.67ms
 ```
 
-## 获取 token
 
-```
-curl https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
-```
-
-```
-$ curl https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx1cf9245f9f2cc40e&secret=d4624c36b6795d1d99dcf0547af5443d
-{"access_token":"gtmqjG1mHkGhPBwYwd272YHfJtkQn_7k-eS96iPMCd6HM3-CCCdvkVrd7lwNfDJQ1yyIQFPVfpQSpWBR_vHBuuSy9WEvljNazScdZ5bq9ghXwWAp_JKrqsQ5q3u16p4EJPIbAAABHA","expires_in":7200}
-```
-
-生产环境
-
+## 本实例中的配置信息
 
 微信号： gh_feb29e69bcbb
 
@@ -45,7 +34,25 @@ d4624c36b6795d1d99dcf0547af5443d
 
 ### 接口配置信息
 URL
-http://101.231.185.66/_callback/dsk/wx/
+http://zhanghe.ngrok.cc/weixin
 Token
-wealink
+wechat_token
 
+### JS接口安全域名
+域名
+zhanghe.ngrok.cc
+
+
+[官方demo](http://203.195.235.76/jssdk/)
+
+
+## 获取 token
+
+```
+curl https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
+```
+
+```
+$ curl https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx1cf9245f9f2cc40e&secret=d4624c36b6795d1d99dcf0547af5443d
+{"access_token":"gtmqjG1mHkGhPBwYwd272YHfJtkQn_7k-eS96iPMCd6HM3-CCCdvkVrd7lwNfDJQ1yyIQFPVfpQSpWBR_vHBuuSy9WEvljNazScdZ5bq9ghXwWAp_JKrqsQ5q3u16p4EJPIbAAABHA","expires_in":7200}
+```
