@@ -14,10 +14,11 @@
 
 ## 常用接口
 
-获取 token
+### 获取 token
 
+接口地址
 ```
-curl https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
+https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
 ```
 
 示例
@@ -27,7 +28,57 @@ $ curl https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appi
 ```
 
 
+### 模板消息
 
+接口地址
+```
+https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=ACCESS_TOKEN
+```
+
+POST 数据
+```
+{
+    'touser': 'OPENID',
+    'template_id': 'ngqIpbwh8bUfcSsECmogfXcV14J0tQlEpBO27izEYtY',
+    'url': 'http://weixin.qq.com/download',
+    'data': {
+        'first': {
+            'value': '恭喜你购买成功！',
+            'color': '#173177'
+        },
+        'product': {
+            'value': '巧克力',
+            'color': '#173177'
+        },
+        'price': {
+            'value': '39.8元',
+            'color': '#173177'
+        },
+        'time': {
+            'value': '2014年9月22日',
+            'color': '#173177'
+        },
+        'remark': {
+            'value': '欢迎再次购买！',
+            'color': '#173177'
+        }
+    }
+}
+```
+
+
+标题：购买成功通知
+```
+{{first.DATA}}
+
+商品名称：{{product.DATA}}
+商品价格：{{price.DATA}}
+购买时间：{{time.DATA}}
+{{remark.DATA}}
+```
+
+
+### 账号管理 - 生成带参数的二维码
 
 
 ## todo

@@ -74,46 +74,137 @@ def wechat_auth():
 def create_menu():
     """
     创建自定义菜单
+    http://zhanghe.ngrok.cc/create_menu
+    {
+        "errcode": 0,
+        "errmsg": "ok"
+    }
     """
     access_token = get_access_token()
     url = 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token=%s' % access_token
-    menu_data = {
-        "button": [
+    data = {
+        'button': [
             {
-                "type": "click",
-                "name": "今日歌曲",
-                "key": "V1001_TODAY_MUSIC"
+                'type': 'click',
+                'name': '今日歌曲',
+                'key': 'V1001_TODAY_MUSIC'
             },
             {
-                "type": "click",
-                "name": "歌手简介",
-                "key": "V1001_TODAY_SINGER"
+                'type': 'click',
+                'name': '歌手简介',
+                'key': 'V1001_TODAY_SINGER'
             },
             {
-                "name": "菜单",
-                "sub_button": [
+                'name': '菜单',
+                'sub_button': [
                     {
-                        "type": "view",
-                        "name": "搜索",
-                        "url": "http://www.soso.com/"
+                        'type': 'view',
+                        'name': '搜索',
+                        'url': 'http://www.soso.com/'
                     },
                     {
-                        "type": "view",
-                        "name": "视频",
-                        "url": "http://v.qq.com/"
+                        'type': 'view',
+                        'name': '视频',
+                        'url': 'http://v.qq.com/'
                     },
                     {
-                        "type": "click",
-                        "name": "赞一下我们",
-                        "key": "V1001_GOOD"
+                        'type': 'click',
+                        'name': '赞一下我们',
+                        'key': 'V1001_GOOD'
                     },
                     {
-                        "type": "view",
-                        "name": "demo",
-                        "url": "http://zhanghe.ngrok.cc/"
+                        'type': 'view',
+                        'name': 'demo',
+                        'url': 'http://zhanghe.ngrok.cc/'
                     }]
             }]
     }
 
-    res = post(url, data=json.dumps(menu_data, ensure_ascii=False))
+    res = post(url, data=json.dumps(data, ensure_ascii=False))
     return json.dumps(res.json())
+
+
+@app.route('/send_tpl_msg/<openid>', methods=['GET', 'POST'])
+def send_tpl_msg(openid):
+    """
+    发送模板消息
+    http://zhanghe.ngrok.cc/send_tpl_msg/o9XD1weif6-0g_5MvZa7Bx6OkwxA
+    {
+        "msgid": 413348094,
+        "errcode": 0,
+        "errmsg": "ok"
+    }
+    """
+    access_token = get_access_token()
+    url = 'https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s' % access_token
+    data = {
+        'touser': str(openid),
+        'template_id': '-5GfH3t-ofZooFA3CkPin8k-G0vb0_kJBcwcUmxcfEs',
+        'url': 'http://weixin.qq.com/download',
+        'data': {
+            'first': {
+                'value': '恭喜你购买成功！',
+                'color': '#173177'
+            },
+            'product': {
+                'value': '巧克力',
+                'color': '#173177'
+            },
+            'price': {
+                'value': '39.8元',
+                'color': '#173177'
+            },
+            'time': {
+                'value': '2014年9月22日',
+                'color': '#173177'
+            },
+            'remark': {
+                'value': '欢迎再次购买！',
+                'color': '#173177'
+            }
+        }
+    }
+    res = post(url, data=json.dumps(data, ensure_ascii=False))
+    return json.dumps(res.json())
+
+
+@app.route('/create_qrcode/<int:scene_id>', methods=['GET', 'POST'])
+def create_qrcode(scene_id):
+    """
+    账号管理 - 生成带参数的二维码(临时/永久)
+    http://zhanghe.ngrok.cc/create_qrcode/123
+    一、创建二维码 ticket
+    正确返回：
+    {
+        "url": "http://weixin.qq.com/q/LDrqzO-kgnL7ZxnNsRQx",
+        "expire_seconds": 604800,
+        "ticket": "gQH47joAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL0xEcnF6Ty1rZ25MN1p4bk5zUlF4AAIEak96VwMEgDoJAA=="
+    }
+    错误返回：
+    {"errcode":40013,"errmsg":"invalid appid"}
+    二、通过 ticket 换取二维码
+    """
+    access_token = get_access_token()
+    # 创建二维码 ticket
+    url = 'https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=%s' % access_token
+    data = {
+        'expire_seconds': 604800,
+        'action_name': 'QR_SCENE',
+        'action_info': {
+            'scene': {
+                'scene_id': scene_id
+            }
+        }
+    }
+    res = post(url, data=json.dumps(data, ensure_ascii=False))
+    result = res.json()
+    if 'errcode' in result:
+        return json.dumps(result)
+
+    # 通过 ticket 换取二维码
+    url = 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=%s' % result['ticket']
+    res = get(url)
+    response = make_response(res.content)
+    response.headers['Content-Type'] = 'image/jpeg'
+    return response
+

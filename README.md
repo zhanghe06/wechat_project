@@ -19,6 +19,7 @@ $ pip install sqlacodegen
 $ pip install gunicorn
 $ pip install supervisor
 $ pip install schedule
+$ pip install Pillow
 $ pip freeze > requirements.txt
 ```
 
