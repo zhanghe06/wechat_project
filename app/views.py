@@ -9,12 +9,11 @@
 """
 
 import json
-import os
 import time
 import hashlib
 from app import app
 from app.lib.sign import Sign
-from flask import request, make_response, render_template
+from flask import request, make_response, render_template, redirect, url_for
 import xml.etree.ElementTree as ET
 from requests import get, post
 from tools.wechat import get_access_token, get_jsapi_ticket
@@ -121,6 +120,59 @@ def create_menu():
     }
 
     res = post(url, data=json.dumps(data, ensure_ascii=False))
+    return json.dumps(res.json())
+
+
+@app.route('/get_code')
+@app.route('/get_code/<scope>')
+def get_code(scope='snsapi_base'):
+    """
+    网页授权获取用户基本信息 - 用户同意授权，获取 code
+    http://zhanghe.ngrok.cc/get_code
+    http://zhanghe.ngrok.cc/get_code/snsapi_base
+    http://zhanghe.ngrok.cc/get_code/snsapi_userinfo
+    首先设置开发者中心页配置授权回调域名
+    snsapi_base 返回结构：
+    {'state': '', 'code': ''}
+    snsapi_userinfo 返回结构：
+    {'state': '', 'code': '', 'nsukey': ''}
+    """
+    from urllib import quote_plus
+    redirect_uri = url_for('.get_openid', _external=True)
+    # 微信会对授权链接做正则强匹配校验，链接的参数顺序固定
+    url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&redirect_uri=%s&response_type=%s&scope=%s&state=%s#wechat_redirect' % (
+        app.config['APPID'],        # APPID
+        quote_plus(redirect_uri),   # REDIRECT_URI
+        'code',                     # response_type
+        scope,                      # SCOPE (snsapi_base/snsapi_userinfo)
+        time.time()                 # STATE
+    )
+    # return url
+    return redirect(url)
+
+
+@app.route('/get_openid')
+def get_openid():
+    """
+    获取 openid (获取 code 之后的回调地址, 不能单独调用, 因code只能使用一次，5分钟未被使用自动过期)
+    http://zhanghe.ngrok.cc/get_openid
+    正确返回：
+    {
+        "access_token": "yZ37EaD08h2vG4Qq-GSEFmMTKpDcrdOuZK4mqh4JfUf46ui6sga022bPMhqHNnHQFSn1UGHsVuSZDtSDVen-94KiCmiEoBHwRoGcfizhosQ",
+        "openid": "o9XD1weif6-0g_5MvZa7Bx6OkwxA", "expires_in": 7200,
+        "refresh_token": "TCfFOMfSXbN5uSXbn9aaGzZBu7PsaN7iZZWvZKT2MpDaBl0aBO5itwe-1B7POcRxz_EAX6EuOGYt_aw0Smz9HCx-QDyqAewnhZSp5p2oNG4",
+        "scope": "snsapi_base"
+    }
+    错误返回：
+    {"errcode":40029,"errmsg":"invalid code"}
+    """
+    code = request.args.get('code', '')
+    url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code' % (
+        app.config['APPID'],
+        app.config['APPSECRET'],
+        code
+    )
+    res = get(url)
     return json.dumps(res.json())
 
 
