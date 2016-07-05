@@ -99,12 +99,12 @@ Web Interface                 127.0.0.1:4040
 Avg Conn Time                 388.67ms
 ```
 
-### 手动更新 access_token 和 access_token
+### 手动更新 access_token 和 jsapi_ticket
 ```
 更新微信开放平台 access_token
 $ python task.py update_access_token
 
-更新微信开放平台 access_token
+更新微信开放平台 jsapi_ticket
 $ python task.py update_jsapi_ticket
 ```
 
