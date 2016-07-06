@@ -21,6 +21,10 @@ from tools.wechat import get_access_token, get_jsapi_ticket
 
 @app.route('/')
 def demo():
+    """
+    demo
+    http://zhanghe.ngrok.cc
+    """
     sign = Sign(get_jsapi_ticket(), request.url)
     sign.sign()
     data = {
@@ -138,7 +142,7 @@ def get_code(scope='snsapi_base'):
     {'state': '', 'code': '', 'nsukey': ''}
     """
     from urllib import quote_plus
-    redirect_uri = url_for('.get_openid', _external=True)
+    redirect_uri = url_for('.get_openid_access_token', _external=True)
     # 微信会对授权链接做正则强匹配校验，链接的参数顺序固定
     url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&redirect_uri=%s&response_type=%s&scope=%s&state=%s#wechat_redirect' % (
         app.config['APPID'],        # APPID
@@ -151,15 +155,16 @@ def get_code(scope='snsapi_base'):
     return redirect(url)
 
 
-@app.route('/get_openid')
-def get_openid():
+@app.route('/get_openid_access_token')
+def get_openid_access_token():
     """
     获取 openid (获取 code 之后的回调地址, 不能单独调用, 因code只能使用一次，5分钟未被使用自动过期)
-    http://zhanghe.ngrok.cc/get_openid
+    http://zhanghe.ngrok.cc/get_openid_access_token
     正确返回：
     {
         "access_token": "yZ37EaD08h2vG4Qq-GSEFmMTKpDcrdOuZK4mqh4JfUf46ui6sga022bPMhqHNnHQFSn1UGHsVuSZDtSDVen-94KiCmiEoBHwRoGcfizhosQ",
-        "openid": "o9XD1weif6-0g_5MvZa7Bx6OkwxA", "expires_in": 7200,
+        "expires_in": 7200,
+        "openid": "o9XD1weif6-0g_5MvZa7Bx6OkwxA",
         "refresh_token": "TCfFOMfSXbN5uSXbn9aaGzZBu7PsaN7iZZWvZKT2MpDaBl0aBO5itwe-1B7POcRxz_EAX6EuOGYt_aw0Smz9HCx-QDyqAewnhZSp5p2oNG4",
         "scope": "snsapi_base"
     }
@@ -172,6 +177,58 @@ def get_openid():
         app.config['APPSECRET'],
         code
     )
+    res = get(url)
+    # access_token = res.json().get('access_token')
+    # openid = res.json().get('openid')
+    # lang = 'zh_CN'  # 返回国家地区语言版本，zh_CN 简体，zh_TW 繁体，en 英语
+    # url = 'https://api.weixin.qq.com/sns/userinfo?access_token=%s&openid=%s&lang=%s' % (access_token, openid, lang)
+    # res = get(url)
+    # res.encoding = 'utf-8'  # 需要设置, 否则乱码
+    # return json.dumps(res.json(), ensure_ascii=False)
+    return json.dumps(res.json())
+
+
+@app.route('/get_user_info')
+def get_user_info():
+    """
+    获取用户信息
+    http://zhanghe.ngrok.cc/get_user_info?access_token=ACCESS_TOKEN&openid=OPENID
+    正确返回：
+    {
+        "province": "上海",
+        "openid": "o9XD1weif6-0g_5MvZa7Bx6OkwxA",
+        "headimgurl": "http://wx.qlogo.cn/mmopen/ALImIJLVKZtPiaaVkcKFR58xpgibiaxabiaStZYcwVNIfz4Tl8VkqzqpV5fKiaibbRGfkY2lDR9SlibQvVm2ClHD6AIhBYQeuy32qaj/0",
+        "language": "zh_CN",
+        "city": "闸北",
+        "privilege": [],
+        "country": "中国",
+        "nickname": "碎ping子",
+        "sex": 1
+    }
+    错误返回：
+    {"errcode":40003,"errmsg":" invalid openid "}
+    """
+    access_token = request.args.get('access_token')
+    openid = request.args.get('openid')
+    lang = 'zh_CN'  # 返回国家地区语言版本，zh_CN 简体，zh_TW 繁体，en 英语
+    url = 'https://api.weixin.qq.com/sns/userinfo?access_token=%s&openid=%s&lang=%s' % (access_token, openid, lang)
+    res = get(url)
+    res.encoding = 'utf-8'  # 需要设置, 否则乱码
+    return json.dumps(res.json(), ensure_ascii=False)
+
+
+@app.route('/auth_access_token')
+def auth_access_token():
+    """
+    http://zhanghe.ngrok.cc/auth_access_token?access_token=ACCESS_TOKEN&openid=OPENID
+    正确返回：
+    {"errcode":0,"errmsg":"ok"}
+    错误返回：
+    {"errcode":40003,"errmsg":"invalid openid"}
+    """
+    access_token = request.args.get('access_token')
+    openid = request.args.get('openid')
+    url = 'https://api.weixin.qq.com/sns/auth?access_token=%s&openid=%s' % (access_token, openid)
     res = get(url)
     return json.dumps(res.json())
 
@@ -260,3 +317,22 @@ def create_qrcode(scene_id):
     response.headers['Content-Type'] = 'image/jpeg'
     return response
 
+
+@app.route('/short_url', methods=['GET', 'POST'])
+def short_url():
+    """
+    长链接转短链接接口
+    http://zhanghe.ngrok.cc/short_url?long_url=LONG_URL
+    正确返回：
+    {"errcode":0,"errmsg":"ok","short_url":"http:\/\/w.url.cn\/s\/AvCo6Ih"}
+    错误返回：
+    {"errcode":40013,"errmsg":"invalid appid"}
+    """
+    access_token = get_access_token()
+    url = 'https://api.weixin.qq.com/cgi-bin/shorturl?access_token=%s' % access_token
+    data = {
+        'action': 'long2short',
+        'long_url': request.args.get('long_url', '')
+    }
+    res = post(url, data=json.dumps(data, ensure_ascii=False))
+    return json.dumps(res.json())

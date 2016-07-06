@@ -110,3 +110,5 @@ $ python task.py update_jsapi_ticket
 
 
 [官方demo](http://203.195.235.76/jssdk/)
+
+[官方调试工具](http://blog.qqbrowser.cc/)

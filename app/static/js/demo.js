@@ -476,7 +476,9 @@ wx.ready(function () {
         link: 'http://demo.open.weixin.qq.com/jssdk/',
         imgUrl: 'http://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRt8Qia4lv7k3M9J1SKqKCImxJCt7j9rHYicKDI45jRPBxdzdyREWnk0ia0N5TMnMfth7SdxtzMvVgXg/0'
     };
+    //获取“分享给朋友”按钮点击状态及自定义分享内容接口
     wx.onMenuShareAppMessage(shareData);
+    //获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
     wx.onMenuShareTimeline(shareData);
 });
 wx.error(function (res) {
