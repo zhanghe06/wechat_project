@@ -14,7 +14,22 @@ import os
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__)+'/../')
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'db/flask.db')
+# sqlite 数据库配置
+# SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'db/flask.db')
+
+# mysql 数据库配置
+DB_CONFIG = {
+    'host': 'localhost',
+    'user': 'root',
+    'passwd': '123456',
+    'db': 'wechat',
+    'port': 3306
+}
+SQLALCHEMY_DATABASE_URI = \
+    'mysql+mysqldb://%s:%s@%s:%s/%s?charset=utf8' % \
+    (DB_CONFIG['user'], DB_CONFIG['passwd'], DB_CONFIG['host'], DB_CONFIG['port'], DB_CONFIG['db'])
+
+SQLALCHEMY_POOL_SIZE = 5  # 默认 pool_size=5
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 CSRF_ENABLED = True
@@ -32,6 +47,14 @@ MAIL_PORT = 25,
 MAIL_USERNAME = None,
 MAIL_PASSWORD = None,
 MAIL_DEFAULT_SENDER = ('no-reply', 'no-reply@localhost')
+
+# 开发环境邮箱配置
+# MAIL_SERVER = 'smtp.163.com',
+# MAIL_PORT = 25,
+# MAIL_USERNAME = 'xxxxxx@163.com',
+# MAIL_PASSWORD = 'xxxxxx',
+# MAIL_DEFAULT_SENDER = (u'系统邮箱', 'zhang_he06@163.com')
+
 # 后台管理人员邮件列表
 ADMINS = ['455091702@qq.com']
 

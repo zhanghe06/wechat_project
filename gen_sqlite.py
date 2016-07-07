@@ -4,7 +4,7 @@
 """
 @author: zhanghe
 @software: PyCharm
-@file: gen.py
+@file: gen_sqlite.py
 @time: 16-7-6 上午10:30
 """
 
@@ -19,7 +19,7 @@ SQLALCHEMY_DATABASE_URI = app.config['SQLALCHEMY_DATABASE_URI']
 def create_models():
     """
     创建 model
-    $ python gen.py gen_models
+    $ python gen_sqlite.py gen_models
     """
     file_path = os.path.join(BASE_DIR, 'app/models.py')
     cmd = 'sqlacodegen %s --outfile %s' % (SQLALCHEMY_DATABASE_URI, file_path)
@@ -53,10 +53,10 @@ def create_models():
 def create_db():
     """
     建库 建表
-    $ python gen.py create_db
+    $ python gen_sqlite.py create_db
     """
     # 初始化数据库
-    cmd = 'sqlite3 %s < %s' % (os.path.join(BASE_DIR, 'db/flask.db'), os.path.join(BASE_DIR, 'db/schema.sql'))
+    cmd = 'sqlite3 %s < %s' % (os.path.join(BASE_DIR, 'db/flask.db'), os.path.join(BASE_DIR, 'db/schema_sqlite.sql'))
     print cmd
     output = os.popen(cmd)
     result = output.read()
@@ -72,10 +72,10 @@ def create_db():
 def dump_db():
     """
     备份数据
-    $ python gen.py dump_db
+    $ python gen_sqlite.py dump_db
     """
     # 添加测试数据
-    cmd = 'sqlite3 %s ".dump" > %s' % (os.path.join(BASE_DIR, 'db/flask.db'), os.path.join(BASE_DIR, 'db/schema.dump.sql'))
+    cmd = 'sqlite3 %s ".dump" > %s' % (os.path.join(BASE_DIR, 'db/flask.db'), os.path.join(BASE_DIR, 'db/schema_sqlite.dump.sql'))
     print cmd
     output = os.popen(cmd)
     result = output.read()
@@ -105,13 +105,13 @@ def usage():
     """
     print """
 创建(更新)model
-$ python gen.py create_models
+$ python gen_sqlite.py create_models
 
 初始化数据库
-$ python gen.py create_db
+$ python gen_sqlite.py create_db
 
 备份数据
-$ python gen.py dump_db
+$ python gen_sqlite.py dump_db
 """
 
 

@@ -171,7 +171,10 @@ def get_openid_access_token():
     错误返回：
     {"errcode":40029,"errmsg":"invalid code"}
     """
-    code = request.args.get('code', '')
+    code = request.args.get('code')
+    # 用户拒绝, 调回首页
+    if code is None:
+        return url_for('.demo', _external=True)
     url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code' % (
         app.config['APPID'],
         app.config['APPSECRET'],
@@ -191,7 +194,7 @@ def get_openid_access_token():
 @app.route('/get_user_info')
 def get_user_info():
     """
-    获取用户信息
+    获取用户信息(关注公众号之后才有权限)
     http://zhanghe.ngrok.cc/get_user_info?access_token=ACCESS_TOKEN&openid=OPENID
     正确返回：
     {
@@ -206,7 +209,7 @@ def get_user_info():
         "sex": 1
     }
     错误返回：
-    {"errcode":40003,"errmsg":" invalid openid "}
+    {"errcode":40003,"errmsg":"invalid openid"}
     """
     access_token = request.args.get('access_token')
     openid = request.args.get('openid')
