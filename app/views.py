@@ -16,7 +16,7 @@ from app.lib.sign import Sign
 from flask import request, make_response, render_template, redirect, url_for
 import xml.etree.ElementTree as ET
 from requests import get, post
-from tools.wechat import get_access_token, get_jsapi_ticket
+from tools.wechat import get_access_token, get_jsapi_ticket, xml_rep_text
 
 
 @app.route('/')
@@ -64,13 +64,29 @@ def wechat_auth():
         rec = request.stream.read()
         xml_rec = ET.fromstring(rec)
         # xml_rec = ET.fromstring(request.data)
-        tou = xml_rec.find('ToUserName').text
-        fromu = xml_rec.find('FromUserName').text
-        content = xml_rec.find('Content').text
-        xml_rep = "<xml><ToUserName><![CDATA[%s]]></ToUserName><FromUserName><![CDATA[%s]]></FromUserName><CreateTime>%s</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[%s]]></Content><FuncFlag>0</FuncFlag></xml>"
-        response = make_response(xml_rep % (fromu, tou, str(int(time.time())), content))
-        response.content_type = 'application/xml'
-        return response
+
+        from_user = xml_rec.find('FromUserName').text
+        to_user = xml_rec.find('ToUserName').text
+        msg_type = xml_rec.find('MsgType').text
+
+        # 处理事件推送
+        if msg_type == 'event':
+            event = xml_rec.find('Event').text
+            content = ''
+            if event == 'subscribe':  # 订阅/关注
+                content = u'欢迎关注本微信'
+            if event == 'unsubscribe':  # 取消订阅/取消关注
+                content = u'我们会慢慢改进，欢迎您以后再来'
+            response = make_response(xml_rep_text % (from_user, to_user, str(int(time.time())), content))
+            response.content_type = 'application/xml'
+            return response
+
+        # 处理文本消息
+        if msg_type == "text":
+            content = xml_rec.find('Content').text
+            response = make_response(xml_rep_text % (from_user, to_user, str(int(time.time())), content))
+            response.content_type = 'application/xml'
+            return response
 
 
 @app.route('/create_menu', methods=['GET', 'POST'])
