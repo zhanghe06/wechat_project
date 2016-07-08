@@ -16,7 +16,7 @@ from app.lib.sign import Sign
 from flask import request, make_response, render_template, redirect, url_for
 import xml.etree.ElementTree as ET
 from requests import get, post
-from tools.wechat import get_access_token, get_jsapi_ticket, xml_rep_text
+from tools.wechat import get_access_token, get_jsapi_ticket, xml_rep_text, make_xml_response
 
 
 @app.route('/')
@@ -67,20 +67,24 @@ def wechat_auth():
 
         from_user = xml_rec.find('FromUserName').text
         to_user = xml_rec.find('ToUserName').text
+        create_time = xml_rec.find('CreateTime').text
         msg_type = xml_rec.find('MsgType').text
+        msg_id = xml_rec.find('MsgID').text
 
         # 处理事件推送
         if msg_type == 'event':
             event = xml_rec.find('Event').text
-            content = ''
             if event == 'subscribe':  # 订阅/关注
                 content = u'欢迎关注本微信'
+                make_xml_response(xml_rep_text, from_user, to_user, str(int(time.time())), content)
             if event == 'unsubscribe':  # 取消订阅/取消关注
                 content = u'我们会慢慢改进，欢迎您以后再来'
-            response = make_response(xml_rep_text % (from_user, to_user, str(int(time.time())), content))
-            response.content_type = 'application/xml'
-            return response
-
+                make_xml_response(xml_rep_text, from_user, to_user, str(int(time.time())), content)
+            if event == 'TEMPLATESENDJOBFINISH':  # 模板消息发送完成 是否送达成功通知
+                status = xml_rec.find('Status').text
+                # 'success'                 发送状态为成功
+                # 'failed:user block'       发送状态为用户拒绝接收
+                # 'failed: system failed'   发送状态为发送失败（非用户拒绝）
         # 处理文本消息
         if msg_type == "text":
             content = xml_rec.find('Content').text

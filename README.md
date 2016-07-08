@@ -19,6 +19,7 @@ $ pip install sqlacodegen
 $ pip install gunicorn
 $ pip install supervisor
 $ pip install schedule
+$ pip install MySQL-python
 $ pip install Pillow
 $ pip freeze > requirements.txt
 ```
@@ -112,3 +113,5 @@ $ python task.py update_jsapi_ticket
 [官方demo](http://203.195.235.76/jssdk/)
 
 [官方调试工具](http://blog.qqbrowser.cc/)
+
+[公众平台正式登录入口](https://mp.weixin.qq.com)

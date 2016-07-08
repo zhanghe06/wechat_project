@@ -10,6 +10,7 @@
 
 
 import os
+from flask import make_response
 
 
 def get_access_token():
@@ -30,6 +31,15 @@ def get_jsapi_ticket():
     with open(jsapi_ticket_file_name, 'r') as f:
         jsapi_ticket = f.read()
     return jsapi_ticket
+
+
+def make_xml_response(xml_rep_tpl, *args):
+    """
+    创建 xml 响应消息
+    """
+    response = make_response(xml_rep_tpl % args)
+    response.content_type = 'application/xml'
+    return response
 
 
 # 被动回复用户消息 http://mp.weixin.qq.com/wiki/14/89b871b5466b19b3efa4ada8e577d45e.html
