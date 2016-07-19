@@ -9,9 +9,21 @@
 """
 
 
-from flask import Flask
+from flask import Flask, render_template
+from .views.weixin import weixin_bp
+
+
 app = Flask(__name__)
 app.config.from_object('config')
 
 
-from app import views
+app.register_blueprint(weixin_bp)
+
+
+@app.route('/')
+@app.route('/index')
+def index():
+    """
+    网站首页
+    """
+    return render_template('layout.html')

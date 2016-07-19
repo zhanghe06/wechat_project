@@ -4,31 +4,35 @@
 """
 @author: zhanghe
 @software: PyCharm
-@file: views.py
-@time: 16-6-6 下午1:07
+@file: weixin.py
+@time: 16-7-13 下午6:20
 """
+
 
 import json
 import time
 import hashlib
-from app import app
+from config import APPID, APPSECRET
 from app.lib.sign import Sign
-from flask import request, make_response, render_template, redirect, url_for
+from flask import Blueprint, request, make_response, render_template, redirect, url_for
 import xml.etree.ElementTree as ET
 from requests import get, post
 from tools.wechat import get_access_token, get_jsapi_ticket, xml_rep_text, make_xml_response
 
 
-@app.route('/')
+weixin_bp = Blueprint('weixin', __name__, url_prefix='/weixin')
+
+
+@weixin_bp.route('/')
 def demo():
     """
     demo
-    http://zhanghe.ngrok.cc
+    http://zhanghe.ngrok.cc/weixin
     """
     sign = Sign(get_jsapi_ticket(), request.url)
     sign.sign()
     data = {
-        'appId': app.config['APPID'],
+        'appId': APPID,
         'timestamp': sign.ret['timestamp'],
         'nonceStr': sign.ret['nonceStr'],
         'signature': sign.ret['signature']
@@ -36,13 +40,13 @@ def demo():
     return render_template('demo.html', **data)
 
 
-@app.route('/weixin', methods=['GET', 'POST'])
+@weixin_bp.route('/callback', methods=['GET', 'POST'])
 def wechat_auth():
     """
     验证服务器地址的有效性
     接口配置信息
         URL
-        http://zhanghe.ngrok.cc/weixin
+        http://zhanghe.ngrok.cc/weixin/callback
         Token
         wechat_token
     GET /weixin?signature=0a96c67c0adf58d79ee57d5ee6837f896f70f9ec&echostr=601962190953118907&timestamp=1467559097&nonce=1527000568 HTTP/1.0
@@ -93,11 +97,11 @@ def wechat_auth():
             return response
 
 
-@app.route('/create_menu', methods=['GET', 'POST'])
+@weixin_bp.route('/create_menu', methods=['GET', 'POST'])
 def create_menu():
     """
     创建自定义菜单
-    http://zhanghe.ngrok.cc/create_menu
+    http://zhanghe.ngrok.cc/weixin/create_menu
     {
         "errcode": 0,
         "errmsg": "ok"
@@ -147,14 +151,14 @@ def create_menu():
     return json.dumps(res.json())
 
 
-@app.route('/get_code')
-@app.route('/get_code/<scope>')
+@weixin_bp.route('/get_code')
+@weixin_bp.route('/get_code/<scope>')
 def get_code(scope='snsapi_base'):
     """
     网页授权获取用户基本信息 - 用户同意授权，获取 code
-    http://zhanghe.ngrok.cc/get_code
-    http://zhanghe.ngrok.cc/get_code/snsapi_base
-    http://zhanghe.ngrok.cc/get_code/snsapi_userinfo
+    http://zhanghe.ngrok.cc/weixin/get_code
+    http://zhanghe.ngrok.cc/weixin/get_code/snsapi_base
+    http://zhanghe.ngrok.cc/weixin/get_code/snsapi_userinfo
     首先设置开发者中心页配置授权回调域名
     snsapi_base 返回结构：
     {'state': '', 'code': ''}
@@ -165,7 +169,7 @@ def get_code(scope='snsapi_base'):
     redirect_uri = url_for('.get_openid_access_token', _external=True)
     # 微信会对授权链接做正则强匹配校验，链接的参数顺序固定
     url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=%s&redirect_uri=%s&response_type=%s&scope=%s&state=%s#wechat_redirect' % (
-        app.config['APPID'],        # APPID
+        APPID,        # APPID
         quote_plus(redirect_uri),   # REDIRECT_URI
         'code',                     # response_type
         scope,                      # SCOPE (snsapi_base/snsapi_userinfo)
@@ -175,7 +179,7 @@ def get_code(scope='snsapi_base'):
     return redirect(url)
 
 
-@app.route('/get_openid_access_token')
+@weixin_bp.route('/get_openid_access_token')
 def get_openid_access_token():
     """
     获取 openid (获取 code 之后的回调地址, 不能单独调用, 因code只能使用一次，5分钟未被使用自动过期)
@@ -196,8 +200,8 @@ def get_openid_access_token():
     if code is None:
         return url_for('.demo', _external=True)
     url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&secret=%s&code=%s&grant_type=authorization_code' % (
-        app.config['APPID'],
-        app.config['APPSECRET'],
+        APPID,
+        APPSECRET,
         code
     )
     res = get(url)
@@ -211,11 +215,11 @@ def get_openid_access_token():
     return json.dumps(res.json())
 
 
-@app.route('/get_user_info')
+@weixin_bp.route('/get_user_info')
 def get_user_info():
     """
     获取用户信息(关注公众号之后才有权限)
-    http://zhanghe.ngrok.cc/get_user_info?access_token=ACCESS_TOKEN&openid=OPENID
+    http://zhanghe.ngrok.cc/weixin/get_user_info?access_token=ACCESS_TOKEN&openid=OPENID
     正确返回：
     {
         "province": "上海",
@@ -240,10 +244,10 @@ def get_user_info():
     return json.dumps(res.json(), ensure_ascii=False)
 
 
-@app.route('/auth_access_token')
+@weixin_bp.route('/auth_access_token')
 def auth_access_token():
     """
-    http://zhanghe.ngrok.cc/auth_access_token?access_token=ACCESS_TOKEN&openid=OPENID
+    http://zhanghe.ngrok.cc/weixin/auth_access_token?access_token=ACCESS_TOKEN&openid=OPENID
     正确返回：
     {"errcode":0,"errmsg":"ok"}
     错误返回：
@@ -256,11 +260,11 @@ def auth_access_token():
     return json.dumps(res.json())
 
 
-@app.route('/send_tpl_msg/<openid>', methods=['GET', 'POST'])
+@weixin_bp.route('/send_tpl_msg/<openid>', methods=['GET', 'POST'])
 def send_tpl_msg(openid):
     """
     发送模板消息
-    http://zhanghe.ngrok.cc/send_tpl_msg/o9XD1weif6-0g_5MvZa7Bx6OkwxA
+    http://zhanghe.ngrok.cc/weixin/send_tpl_msg/o9XD1weif6-0g_5MvZa7Bx6OkwxA
     {
         "msgid": 413348094,
         "errcode": 0,
@@ -300,11 +304,11 @@ def send_tpl_msg(openid):
     return json.dumps(res.json())
 
 
-@app.route('/create_qrcode/<int:scene_id>', methods=['GET', 'POST'])
+@weixin_bp.route('/create_qrcode/<int:scene_id>', methods=['GET', 'POST'])
 def create_qrcode(scene_id):
     """
     账号管理 - 生成带参数的二维码(临时/永久)
-    http://zhanghe.ngrok.cc/create_qrcode/123
+    http://zhanghe.ngrok.cc/weixin/create_qrcode/123
     一、创建二维码 ticket
     正确返回：
     {
@@ -341,11 +345,11 @@ def create_qrcode(scene_id):
     return response
 
 
-@app.route('/short_url', methods=['GET', 'POST'])
+@weixin_bp.route('/short_url', methods=['GET', 'POST'])
 def short_url():
     """
     长链接转短链接接口
-    http://zhanghe.ngrok.cc/short_url?long_url=LONG_URL
+    http://zhanghe.ngrok.cc/weixin/short_url?long_url=LONG_URL
     正确返回：
     {"errcode":0,"errmsg":"ok","short_url":"http:\/\/w.url.cn\/s\/AvCo6Ih"}
     错误返回：

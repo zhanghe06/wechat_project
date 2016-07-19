@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery WeUI</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+    <link rel="stylesheet" href="../static/node_modules/jquery-weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="../static/node_modules/jquery-weui/dist/demos/css/demos.css">
+    <!-- 触摸滑动插件 -->
+    <link rel="stylesheet" href="../static/css/swiper.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+
+<body ontouchstart>
+
+<!-- 下拉刷新 -->
+<div class="weui-pull-to-refresh-layer">
+    <div class='pull-to-refresh-arrow'></div>
+    <div class='pull-to-refresh-preloader'></div>
+    <div class="down">下拉刷新</div>
+    <div class="up">释放刷新</div>
+    <div class="refresh">正在刷新</div>
+</div>
+
+<!-- 侧滑背景 -->
+<nav id="menu">
+    <header class="demos-header">
+        <h2 class="demos-title">Demo</h2>
+    </header>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell weui_cell_switch">
+            <div class="weui_cell_hd weui_cell_primary">接受通知</div>
+            <div class="weui_cell_ft">
+                <input class="weui_switch" type="checkbox">
+            </div>
+        </div>
+    </div>
+    <div class="weui_cells_title">带图标、说明、跳转的列表项</div>
+    <div class="weui_cells weui_cells_access">
+        <a class="weui_cell" href="javascript:;">
+            <div class="weui_cell_hd"><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
+                    alt="" style="width:20px;margin-right:5px;display:block"></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>cell standard</p>
+            </div>
+            <div class="weui_cell_ft">说明文字</div>
+        </a>
+        <a class="weui_cell" href="javascript:;">
+            <div class="weui_cell_hd"><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
+                    alt="" style="width:20px;margin-right:5px;display:block"></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>cell standard</p>
+            </div>
+            <div class="weui_cell_ft">说明文字</div>
+        </a>
+    </div>
+
+    <div class="weui_cells_title">单选列表项</div>
+    <div class="weui_cells weui_cells_radio">
+        <label class="weui_cell weui_check_label" for="x11">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>cell standard</p>
+            </div>
+            <div class="weui_cell_ft">
+                <input type="radio" class="weui_check" name="radio1" id="x11">
+                <span class="weui_icon_checked"></span>
+            </div>
+        </label>
+        <label class="weui_cell weui_check_label" for="x12">
+
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>cell standard</p>
+            </div>
+            <div class="weui_cell_ft">
+                <input type="radio" name="radio1" class="weui_check" id="x12" checked="checked">
+                <span class="weui_icon_checked"></span>
+            </div>
+        </label>
+    </div>
+
+    <div class="weui_cells_title">复选列表项</div>
+    <div class="weui_cells weui_cells_checkbox">
+        <label class="weui_cell weui_check_label" for="s11">
+            <div class="weui_cell_hd">
+                <input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked">
+                <i class="weui_icon_checked"></i>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>standard is dealt for u.</p>
+            </div>
+        </label>
+        <label class="weui_cell weui_check_label" for="s12">
+            <div class="weui_cell_hd">
+                <input type="checkbox" name="checkbox1" class="weui_check" id="s12">
+                <i class="weui_icon_checked"></i>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>standard is dealicient for u.</p>
+            </div>
+        </label>
+    </div>
+</nav>
+
+<!-- 顶部搜索 -->
+{#<div class="weui_search_bar fixed" id="search_bar" style="position: fixed; top:0; left: 0; width: 100%">#}
+<div class="weui_search_bar fixed" id="search_bar" style="width: 100%">
+    <form class="weui_search_outer">
+        <div class="weui_search_inner">
+            <i class="weui_icon_search"></i>
+            <input type="search" class="weui_search_input" id="search_input" placeholder="搜索" required/>
+            <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+        </div>
+        <label for="search_input" class="weui_search_text" id="search_text">
+            <i class="weui_icon_search"></i>
+            <span>搜索</span>
+        </label>
+    </form>
+    <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+</div>
+<div style="padding-top:44px;"></div>
+
+<!-- 主体页面 -->
+<main id="panel" style="background-color: #ffffff">
+
+    <header class='demos-header'>
+        <h1 class="demos-title">表单</h1>
+    </header>
+
+    <p>Time: <span id="time">下拉我试试</span></p>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img data-src="../static/imgs/car.jpg" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="../static/imgs/car.jpg" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="../static/imgs/car.jpg" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="../static/imgs/car.jpg" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="../static/imgs/car.jpg" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="../static/imgs/car.jpg" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">qq</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="tel" placeholder="请输入qq号">
+            </div>
+        </div>
+        <div class="weui_cell weui_vcode">
+            <div class="weui_cell_hd"><label class="weui_label">验证码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="number" placeholder="请输入验证码">
+            </div>
+            <div class="weui_cell_ft">
+                <img src="../static/node_modules/jquery-weui/dist/demos/images/vcode.jpg">
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_switch">
+            <div class="weui_cell_hd weui_cell_primary">接受通知</div>
+            <div class="weui_cell_ft">
+                <input class="weui_switch" type="checkbox">
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">日期</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="date" value="">
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">时间</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="datetime-local" value="" placeholder="">
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_select">
+            <div class="weui_cell_bd weui_cell_primary">
+                <select class="weui_select" name="select1">
+                    <option selected="" value="0">选择</option>
+                    <option value="1">微信号</option>
+                    <option value="2">QQ号</option>
+                    <option value="3">Email</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="weui_cells_title">文本域</div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <textarea class="weui_textarea" placeholder="请输入评论" rows="3"></textarea>
+                <div class="weui_textarea_counter"><span>0</span>/200</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <div class="weui_uploader">
+                    <div class="weui_uploader_hd weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">图片上传</div>
+                        <div class="weui_cell_ft">0/2</div>
+                    </div>
+                    <div class="weui_uploader_bd">
+                        <ul class="weui_uploader_files">
+                            <li class="weui_uploader_file"
+                                style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                            <li class="weui_uploader_file"
+                                style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                            <li class="weui_uploader_file"
+                                style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                            <li class="weui_uploader_file weui_uploader_status"
+                                style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                <div class="weui_uploader_status_content">
+                                    <i class="weui_icon_warn"></i>
+                                </div>
+                            </li>
+                            <li class="weui_uploader_file weui_uploader_status"
+                                style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                <div class="weui_uploader_status_content">50%</div>
+                            </li>
+                        </ul>
+                        <div class="weui_uploader_input_wrp">
+                            <input class="weui_uploader_input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif"
+                                   multiple="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="start" class="weui_label">发出地</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" id="start" type="text" value="湖北 武汉 武昌区">
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="end" class="weui_label">目的地</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" id="end" type="text" value="">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <h2 class="demos-second-title">表单校验</h2>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell weui_cell_warn">
+            <div class="weui_cell_hd"><label class="weui_label">qq</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input id='tel' class="weui_input" type="tel" placeholder="请输入qq号">
+            </div>
+        </div>
+        <div class="weui_cell weui_vcode weui_cell_warn">
+            <div class="weui_cell_hd"><label class="weui_label">验证码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input id='code' class="weui_input" type="number" placeholder="请输入验证码">
+            </div>
+            <div class="weui_cell_ft">
+                <i class="weui_icon_warn"></i>
+                <img src="../static/node_modules/jquery-weui/dist/demos/images/vcode.jpg">
+            </div>
+        </div>
+        <div class="weui_cells_tips">底部说明文字底部说明文字</div>
+        <div class="weui_btn_area">
+            <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">确定</a>
+        </div>
+    </div>
+
+</main>
+
+<!-- 底部导航 -->
+<div style="padding-bottom:75px;"></div>
+{#<div class="weui_grids fixed" style="bottom:0; width: 100%; background-color: #ffffff;">#}
+<div class="weui_grids bottom-fixed" style="width: 100%; background-color: #ffffff; z-index: 99999">
+    <a href="buttons.html" class="weui_grid js_grid" data-id="button" style="width: 25%; padding: 10px">
+        <div class="weui_grid_icon">
+            <img src="../static/node_modules/jquery-weui/dist/demos/images/icon_nav_button.png" alt="">
+        </div>
+        <p class="weui_grid_label">
+            Button
+        </p>
+    </a>
+    <a href="cell.html" class="weui_grid js_grid" data-id="cell" style="width: 25%; padding: 10px">
+        <div class="weui_grid_icon">
+            <img src="../static/node_modules/jquery-weui/dist/demos/images/icon_nav_cell.png" alt="">
+        </div>
+        <p class="weui_grid_label">
+            Cell
+        </p>
+    </a>
+    <a href="dialog.html" class="weui_grid js_grid" data-id="dialog" style="width: 25%; padding: 10px">
+        <div class="weui_grid_icon">
+            <img src="../static/node_modules/jquery-weui/dist/demos/images/icon_nav_dialog.png" alt="">
+        </div>
+        <p class="weui_grid_label">
+            Dialog
+        </p>
+    </a>
+    <a href="toast.html" class="weui_grid js_grid" data-id="toast" style="width: 25%; padding: 10px">
+        <div class="weui_grid_icon">
+            <img src="../static/node_modules/jquery-weui/dist/demos/images/icon_nav_toast.png" alt="">
+        </div>
+        <p class="weui_grid_label">
+            Toast
+        </p>
+    </a>
+</div>
+<script src="../static/node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../static/node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+<script src="../static/node_modules/jquery-weui/dist/js/city-picker.js"></script>
+<script src="../static/node_modules/jquery-weui/dist/js/city-picker.js"></script>
+<!-- 触摸滑动插件 -->
+<script src="../static/js/swiper.jquery.min.js"></script>
+
+
+<script>
+    $("#showTooltips").click(function () {
+        var tel = $('#tel').val();
+        var code = $('#code').val();
+        if (!tel || !/1[3|4|5|7|8]\d{9}/.test(tel)) $.toptip('请输入手机号');
+        else if (!code || !/\d{6}/.test(code)) $.toptip('请输入六位手机验证码');
+        else $.toptip('提交成功', 'success');
+    });
+</script>
+<script src="{{ url_for('static', filename='js/slideout.min.js') }}"></script>
+<script>
+    // 侧滑
+    var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70
+    });
+    slideout.on('beforeopen', function () {
+        document.querySelector('.fixed').classList.add('fixed-open');
+        document.querySelector('.bottom-fixed').classList.add('fixed-open');
+    });
+    slideout.on('beforeclose', function () {
+        document.querySelector('.fixed').classList.remove('fixed-open');
+        document.querySelector('.bottom-fixed').classList.remove('fixed-open');
+    });
+    // 地址选择
+    $("#start").cityPicker({
+        title: "选择出发地"
+    });
+    $("#end").cityPicker({
+        title: "选择目的地"
+    });
+    // 下拉刷新
+    $(document.body).pullToRefresh().on("pull-to-refresh", function () {
+        setTimeout(function () {
+            $("#time").text(new Date);
+            $(document.body).pullToRefreshDone();
+        }, 2000);
+    });
+    $(document).ready(function () {
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            width : window.innerWidth, // slide宽度 全屏
+            height: 240,
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false,
+            lazyLoading: true,
+            loop: true
+        });
+    });
+</script>
+</body>
+</html>

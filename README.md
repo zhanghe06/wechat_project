@@ -68,7 +68,7 @@ appsecret | d4624c36b6795d1d99dcf0547af5443d
 
 配置项 | 参数
 ----|------
-URL | http://zhanghe.ngrok.cc/weixin
+URL | http://zhanghe.ngrok.cc/weixin/callback
 Token | wechat_token
 
 
@@ -115,3 +115,22 @@ $ python task.py update_jsapi_ticket
 [官方调试工具](http://blog.qqbrowser.cc/)
 
 [公众平台正式登录入口](https://mp.weixin.qq.com)
+
+
+## Slideout.js 侧滑插件
+
+[https://github.com/mango/slideout](https://github.com/mango/slideout)
+
+安装
+```
+$ npm install slideout
+```
+
+
+## QRCode 二维码生成模块
+
+```
+$ pip install qrcode
+```
+
+[https://pypi.python.org/pypi/qrcode](https://pypi.python.org/pypi/qrcode)
