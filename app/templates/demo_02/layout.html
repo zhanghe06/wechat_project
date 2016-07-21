@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}jQuery WeUI{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="../../static/node_modules/jquery-weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../../static/node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <!-- 触摸滑动插件 -->
+    <link rel="stylesheet" href="../../static/css/swiper.min.css">
+    <style>
+        body {
+            padding-bottom: 75px;
+        }
+
+        .swiper-container-page {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-pagination-page {
+            display: none;  /*隐藏页面滑动分页组件*/
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /*background: #eee;*/
+
+            /* Center slide text vertically
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center; */
+        }
+    </style>
+    <!-- 扩展样式 -->
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body ontouchstart>
+
+<!-- Swiper -->
+<div class="swiper-container swiper-container-page">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            {% block slide_01 %}Slide 1{% endblock %}
+        </div>
+        <div class="swiper-slide">
+            {% block slide_02 %}Slide 2{% endblock %}
+        </div>
+        <div class="swiper-slide">
+            {% block slide_03 %}Slide 3{% endblock %}
+        </div>
+        <div class="swiper-slide">
+            {% block slide_04 %}Slide 4{% endblock %}
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-page swiper-pagination-white"></div>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+<!-- 底部导航 -->
+{% include "demo_02/_footer.html" %}
+
+<!-- 基础JS -->
+<script src="../../static/node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../../static/node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+<!-- 触摸滑动插件 -->
+<script src="../../static/js/swiper.jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Initialize Swiper
+        var swiper_page = new Swiper('.swiper-container-page', {
+            width : window.innerWidth, // slide宽度 全屏
+            //height: window.innerHeight, // slide高度 全屏
+            pagination: '.swiper-pagination-page',
+            paginationClickable: true,
+            //spaceBetween: 30,
+            centeredSlides: true,
+            loop: true
+        });
+        $('#slide_01').click(function(){
+            swiper_page.bullets[0].click();
+        });
+        $('#slide_02').click(function(){
+            swiper_page.bullets[1].click();
+        });
+        $('#slide_03').click(function(){
+            swiper_page.bullets[2].click();
+        });
+        $('#slide_04').click(function(){
+            swiper_page.bullets[3].click();
+        });
+    });
+</script>
+<!-- 扩展JS -->
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>

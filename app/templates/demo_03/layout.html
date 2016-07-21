@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}jQuery WeUI{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="../../static/node_modules/jquery-weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../../static/node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <!-- 扩展样式 -->
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body ontouchstart>
+
+<!-- 顶部搜索 -->
+{% include "demo_03/_search_bar.html" %}
+
+<!-- 主体页面 -->
+{% block content %}
+
+{% endblock %}
+
+<!-- 底部导航 -->
+{% include "demo_03/_footer.html" %}
+
+<!-- 基础JS -->
+<script src="../../static/node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+<script src="../../static/node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+<!-- 扩展JS -->
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>

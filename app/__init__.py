@@ -11,6 +11,7 @@
 
 from flask import Flask, render_template
 from .views.weixin import weixin_bp
+from .views.demo import demo_bp
 
 
 app = Flask(__name__)
@@ -18,6 +19,7 @@ app.config.from_object('config')
 
 
 app.register_blueprint(weixin_bp)
+app.register_blueprint(demo_bp)
 
 
 @app.route('/')

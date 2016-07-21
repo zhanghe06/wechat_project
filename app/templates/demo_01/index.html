@@ -1,0 +1,35 @@
+{% extends "demo_01/layout.html" %}
+
+{% block title -%}
+    简单示例
+{%- endblock %}
+
+{% block extra_css -%}
+    <style>
+        body {
+            /*padding-top:44px;*/ /*消除顶部浮动固定导致页面顶部遮盖*/
+            padding-bottom: 75px; /*消除底部浮动固定导致页面底部遮盖*/
+        }
+    </style>
+{%- endblock %}
+
+{% block content -%}
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <p>10</p>
+    <p>11</p>
+    <p>12</p>
+    <p>13</p>
+    <p>14</p>
+    <p>15</p>
+{%- endblock %}
+
+{% block extra_js -%}
+{%- endblock %}

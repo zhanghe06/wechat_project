@@ -218,7 +218,7 @@ def get_openid_access_token():
 @weixin_bp.route('/get_user_info')
 def get_user_info():
     """
-    获取用户信息(关注公众号之后才有权限)
+    基于微信网页授权 获取用户信息(关注公众号之后才有权限)
     http://zhanghe.ngrok.cc/weixin/get_user_info?access_token=ACCESS_TOKEN&openid=OPENID
     正确返回：
     {
