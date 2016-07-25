@@ -63,6 +63,8 @@ def wechat_auth():
         s = ''.join(s)
         if hashlib.sha1(s).hexdigest() == signature:
             return make_response(echostr)
+        else:
+            return make_response(u'验证失败')
 
     if request.method == 'POST':
         rec = request.stream.read()
@@ -73,28 +75,78 @@ def wechat_auth():
         to_user = xml_rec.find('ToUserName').text
         create_time = xml_rec.find('CreateTime').text
         msg_type = xml_rec.find('MsgType').text
-        msg_id = xml_rec.find('MsgID').text
+        content = u''
 
         # 处理事件推送
         if msg_type == 'event':
             event = xml_rec.find('Event').text
-            if event == 'subscribe':  # 订阅/关注
+            # 订阅/关注
+            if event == 'subscribe':
                 content = u'欢迎关注本微信'
-                make_xml_response(xml_rep_text, from_user, to_user, str(int(time.time())), content)
-            if event == 'unsubscribe':  # 取消订阅/取消关注
+            # 取消订阅/取消关注
+            if event == 'unsubscribe':
                 content = u'我们会慢慢改进，欢迎您以后再来'
-                make_xml_response(xml_rep_text, from_user, to_user, str(int(time.time())), content)
-            if event == 'TEMPLATESENDJOBFINISH':  # 模板消息发送完成 是否送达成功通知
+            # 点击菜单拉取消息时的事件推送
+            if event == 'CLICK':
+                event_key = xml_rec.find('EventKey').text
+                print event_key  # 自定义菜单接口中KEY值
+            # 点击菜单跳转链接时的事件推送
+            if event == 'VIEW':
+                event_key = xml_rec.find('EventKey').text
+                print event_key  # 跳转URL
+            # 上报地理位置事件
+            if event == 'LOCATION':
+                latitude = xml_rec.find('Latitude').text  # 纬度
+                longitude = xml_rec.find('Longitude').text  # 经度
+                precision = xml_rec.find('Precision').text  # 精度
+                print latitude
+                print longitude
+                print precision
+            # 模板消息发送完成 是否送达成功通知
+            if event == 'TEMPLATESENDJOBFINISH':
                 status = xml_rec.find('Status').text
                 # 'success'                 发送状态为成功
                 # 'failed:user block'       发送状态为用户拒绝接收
                 # 'failed: system failed'   发送状态为发送失败（非用户拒绝）
+                print status
         # 处理文本消息
         if msg_type == "text":
+            msg_id = xml_rec.find('MsgID').text
             content = xml_rec.find('Content').text
-            response = make_response(xml_rep_text % (from_user, to_user, str(int(time.time())), content))
-            response.content_type = 'application/xml'
-            return response
+        # 处理图片消息
+        if msg_type == 'image':
+            msg_id = xml_rec.find('MsgID').text
+            media_id = xml_rec.find('MediaId').text
+            pic_url = xml_rec.find('PicUrl').text
+        # 处理语音消息
+        if msg_type == 'voice':
+            msg_id = xml_rec.find('MsgID').text
+            media_id = xml_rec.find('MediaId').text
+            Format = xml_rec.find('Format').text  # 语音格式，如amr，speex等
+        # 处理视频消息
+        if msg_type == 'video':
+            msg_id = xml_rec.find('MsgID').text
+            media_id = xml_rec.find('MediaId').text  # 视频消息媒体id
+            thumb_media_id = xml_rec.find('ThumbMediaId').text  # 视频消息缩略图的媒体id
+        # 处理小视频消息
+        if msg_type == 'shortvideo':
+            msg_id = xml_rec.find('MsgID').text
+            media_id = xml_rec.find('MediaId').text  # 视频消息媒体id
+            thumb_media_id = xml_rec.find('ThumbMediaId').text  # 视频消息缩略图的媒体id
+        # 处理地理位置消息
+        if msg_type == 'location':
+            msg_id = xml_rec.find('MsgID').text
+            location_x = xml_rec.find('Location_X').text  # 维度
+            location_y = xml_rec.find('Location_Y').text  # 经度
+            scale = xml_rec.find('Scale').text  # 地图缩放大小
+            label = xml_rec.find('Label').text  # 地理位置信息
+        # 处理链接消息
+        if msg_type == 'link':
+            msg_id = xml_rec.find('MsgID').text
+            title = xml_rec.find('Title').text
+            description = xml_rec.find('Description').text
+            url = xml_rec.find('Url').text
+        return make_xml_response(xml_rep_text, from_user, to_user, str(int(time.time())), content)
 
 
 @weixin_bp.route('/create_menu', methods=['GET', 'POST'])
@@ -142,7 +194,7 @@ def create_menu():
                     {
                         'type': 'view',
                         'name': 'demo',
-                        'url': 'http://zhanghe.ngrok.cc/'
+                        'url': 'http://zhanghe.ngrok.cc/weixin'
                     }]
             }]
     }

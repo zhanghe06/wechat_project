@@ -87,17 +87,16 @@ $ python run.py
 ### 开启外网访问内网
 ```
 $ cd tools/ngrok/linux_amd64
-$ ./ngrok -config ngrok.cfg start wechat
+$ ./wechat clientid 68bd4946c5d53528
 ```
 
 ```
-Tunnel Status                 online
-Version                       1.7/1.7
-Forwarding                    https://zhanghe.ngrok.cc -> 127.0.0.1:5000
-Forwarding                    http://zhanghe.ngrok.cc -> 127.0.0.1:5000
-Web Interface                 127.0.0.1:4040
-# Conn                        3
-Avg Conn Time                 388.67ms
+隧 道 状 态                           在 线
+版 本                             2.0/2.0
+转 发                             http://zhanghe.ngrok.cc -> 127.0.0.1:5000
+Web界 面                          127.0.0.1:4040
+# Conn                        0
+Avg Conn Time                 0.00ms
 ```
 
 ### 手动更新 access_token 和 jsapi_ticket
