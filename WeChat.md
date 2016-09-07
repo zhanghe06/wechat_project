@@ -81,6 +81,40 @@ POST 数据
 ### 账号管理 - 生成带参数的二维码
 
 
+## 上传图片
+
+1、wx.chooseImage 接口选择图片
+2、wx.uploadImage 接口上传图片有效期3天
+3、下载多媒体文件到服务器
+
+
+## 微信支付
+
+支付申请
+- 1、资料审核
+- 2、账户验证
+- 3、协议签署
+
+开发配置
+
+1、公众号支付
+
+支付授权目录: http://zhanghe.ngrok.cc/weixin/demo/01/order/
+
+2、扫码支付
+
+支付回调URL: http://zhanghe.ngrok.cc/weixin/pay_notify_callback
+
+注意:　申请支付, 必须是备案通过的
+
+页面流程：
+- 确认订单
+    order_info
+- 点击支付
+    order_pay
+- 处理结果
+    pay_callback
+
 ## todo
 
 一段Html代码给微信分享到朋友圈网页链接前加入小图标

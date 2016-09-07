@@ -10,16 +10,25 @@
 
 
 from flask import Flask, render_template
+from app.lib.qiniu_store import QiNiuClient
+from logging.config import dictConfig
 from .views.weixin import weixin_bp
 from .views.demo import demo_bp
+from .views.demo_01 import demo_01_bp
 
 
 app = Flask(__name__)
 app.config.from_object('config')
 
+# 配置日志
+dictConfig(app.config['LOG_CONFIG'])
+
+# 七牛云存储
+qi_niu_client = QiNiuClient(app)
 
 app.register_blueprint(weixin_bp)
 app.register_blueprint(demo_bp)
+app.register_blueprint(demo_01_bp)
 
 
 @app.route('/')

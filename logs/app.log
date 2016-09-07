@@ -1,0 +1,93 @@
+2016-08-01 11:15:34,313 - app - File: weixin.py - line: 276 - get_openid_access_token() - INFO - {"access_token": "b3QYD2MKak93y2c2u4ZwONjn1XrdTCl_uJPr79tBNEAWqeXJE6IoYbT3puOLairm5kAmdv7TSqFbOq_Rns3jPq2YSm4lnhsCknlRABflqeI", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "D0EC92usnkBc15lJhzCgwqBybbfIk2Ohv278mzmhoMadAxw1jhfFyFzk8QPIVq4PyIbOGlHYYbVFhnb-n4v9tGA8ed_tcTA5Th_hyTGlq5U", "scope": "snsapi_base"}
+2016-08-01 11:15:34,693 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-08-01 11:15:50,552 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "RCvuC5Q7QbzWCF877fBmjdPU8DdE6JnH", 
+    "mch_id": "1369038602", 
+    "sign": "83F7D650FBA1A25076048A9D1648BA38", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160801111534", 
+    "total_fee": "1", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-08-01 11:15:50,553 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[RCvuC5Q7QbzWCF877fBmjdPU8DdE6JnH]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[83F7D650FBA1A25076048A9D1648BA38]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160801111534]]></out_trade_no><total_fee>1</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-08-01 11:15:50,894 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[Qp5ciYMxAXZYjNjR]]></nonce_str>
+<sign><![CDATA[FFFF15C9D7EC91926511FB8B52425731]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2016080111155097c3faa6160866748304]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-08-01 11:15:50,898 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx2016080111155097c3faa6160866748304", 
+    "nonce_str": "Qp5ciYMxAXZYjNjR", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-08-01 14:57:24,621 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/get_openid_access_token&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect
+2016-08-01 14:58:24,051 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/get_openid_access_token&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect
+2016-08-01 14:59:46,692 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/get_openid_access_token&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect
+2016-08-01 14:59:57,161 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/get_openid_access_token&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect
+2016-08-01 14:59:57,421 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/get_openid_access_token&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect
+2016-08-01 14:59:58,244 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/get_openid_access_token&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect
+2016-08-01 14:59:58,475 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/get_openid_access_token&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect
+2016-08-01 15:41:00,853 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/test&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect
+2016-08-01 15:41:36,187 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/test&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect
+2016-08-01 15:48:54,041 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/test&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect
+2016-08-01 15:50:33,456 - app - File: wechat.py - line: 350 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/test&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect
+2016-08-01 15:50:33,459 - app - File: wechat.py - line: 351 - get_openid2() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa679229655ae5be3&redirect_uri=http://gwm.91shixing.com/_gwm/zhanghe/weixin/test&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect
+2016-08-01 16:37:42,075 - app - File: weixin.py - line: 592 - oauth_callback() - INFO - {"access_token": "9ZZzptWdVUMyivM3yZAb5GRLXYzB1aDaPgHSJ7pBUzdme6jdFjIYCvUpW33GXeSperkoFAI4F8VSP4p7b4E-C0WK8tqVOfXeBQnzsV0FCqQ", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "HYLa2ikt-RWIqpsoTK5xSXe_z_pLTWMdMR2p_LNJ57pDmT5LGWSElthIiuAvREitp9_KtQ_OmeFqftXS0QzrL-Y_TvJIfJheqSN16g-jriI", "scope": "snsapi_base"}
+2016-08-01 18:42:38,819 - app - File: weixin.py - line: 255 - oauth_callback() - INFO - {"access_token": "8XGEjNP1D8SaHltqO2d2DVvd77FKD7FOGEIkw0lffZRkpE_y1zvXwLS3kfxB8IHwIEDoQnY8IUiWX0Pu7rmMxKAO7LTYPip_KCe7wtET6o0", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "ljJH9TQwpsEOWa7_lr2YvfVQRuLq0KDhjDHRvdXyZOeGimF0XD1awu6r2dUcZe7RpGKPLKzt9vm4Xu7cc-zDBxUuppiWr1jlqHwNt7NiFjs", "scope": "snsapi_base"}
+2016-08-01 18:42:44,429 - app - File: demo_01.py - line: 58 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-08-01 18:42:49,051 - app - File: wechat.py - line: 262 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "60htiUHtS5rsZg0NI3yCgAWcczFTUFPN", 
+    "mch_id": "1369038602", 
+    "sign": "E97CE8DB8CBE18FDD702246979B4C01A", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160801184244", 
+    "total_fee": "1", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-08-01 18:42:49,057 - app - File: wechat.py - line: 264 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[60htiUHtS5rsZg0NI3yCgAWcczFTUFPN]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[E97CE8DB8CBE18FDD702246979B4C01A]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160801184244]]></out_trade_no><total_fee>1</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-08-01 18:42:49,404 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[u1BP6TIVpw73f57z]]></nonce_str>
+<sign><![CDATA[1AD23C2DF96D931860C23528989616DE]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160801184249dfe1c3b6b80092134422]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-08-01 18:42:49,457 - app - File: wechat.py - line: 278 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx20160801184249dfe1c3b6b80092134422", 
+    "nonce_str": "u1BP6TIVpw73f57z", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}

@@ -13,16 +13,13 @@
 
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
     <!-- 基础样式 -->
-    <link rel="stylesheet" href="../../static/node_modules/jquery-weui/dist/lib/weui.min.css">
-    <link rel="stylesheet" href="../../static/node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link href="{{ url_for('static', filename='node_modules/jquery-weui/dist/lib/weui.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='node_modules/jquery-weui/dist/css/jquery-weui.css') }}" rel="stylesheet">
     <!-- 扩展样式 -->
     {% block extra_css %}{% endblock %}
 </head>
 
 <body ontouchstart>
-
-<!-- 顶部搜索 -->
-{% include "demo_01/_search_bar.html" %}
 
 <!-- 主体页面 -->
 {% block content %}{% endblock %}
@@ -31,8 +28,8 @@
 {% include "demo_01/_footer.html" %}
 
 <!-- 基础JS -->
-<script src="../../static/node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
-<script src="../../static/node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+<script src="{{ url_for('static', filename='node_modules/jquery-weui/dist/lib/jquery-2.1.4.js') }}"></script>
+<script src="{{ url_for('static', filename='node_modules/jquery-weui/dist/js/jquery-weui.js') }}"></script>
 <!-- 扩展JS -->
 {% block extra_js %}{% endblock %}
 

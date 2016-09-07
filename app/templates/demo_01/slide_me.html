@@ -1,0 +1,259 @@
+{% extends "demo_01/layout.html" %}
+
+{% block title -%}
+    简单示例
+{%- endblock %}
+
+{% block extra_css -%}
+    <!-- 触摸滑动插件 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}">
+    <style>
+        body {
+            /*padding-top:44px;*/ /*消除顶部浮动固定导致页面顶部遮盖*/
+            padding-bottom: 75px; /*消除底部浮动固定导致页面底部遮盖*/
+        }
+    </style>
+{%- endblock %}
+
+{% block content -%}
+<!-- 主体页面 -->
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">qq</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="tel" placeholder="请输入qq号">
+            </div>
+        </div>
+        <div class="weui_cell weui_vcode">
+            <div class="weui_cell_hd"><label class="weui_label">验证码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="number" placeholder="请输入验证码">
+            </div>
+            <div class="weui_cell_ft">
+                <img src="{{ url_for('static', filename='node_modules/jquery-weui/dist/demos/images/vcode.jpg') }}">
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_switch">
+            <div class="weui_cell_hd weui_cell_primary">接受通知</div>
+            <div class="weui_cell_ft">
+                <input class="weui_switch" type="checkbox" checked="checked">
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">日期</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="date" value="">
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">时间</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="datetime-local" value="" placeholder="">
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_select">
+            <div class="weui_cell_bd weui_cell_primary">
+                <select class="weui_select" name="select1">
+                    <option selected="" value="0">选择</option>
+                    <option value="1">微信号</option>
+                    <option value="2">QQ号</option>
+                    <option value="3">Email</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="weui_cells_title">文本域</div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <textarea id="comment" class="weui_textarea" placeholder="请输入评论" rows="3" maxlength="200"></textarea>
+                <div class="weui_textarea_counter"><span id="text_counter">0</span>/200</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <div class="weui_uploader">
+                    <div class="weui_uploader_hd weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">图片上传</div>
+                        <div class="weui_cell_ft"><span id="img_counts">0</span>/8</div>
+                    </div>
+                    <div class="weui_uploader_bd">
+                        <ul class="weui_uploader_files">
+
+                        </ul>
+                        <div class="weui_uploader_input_wrp">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui_btn_area" id="uploadImage">
+            <span class="weui_btn weui_btn_primary">上传图片</span>
+        </div>
+        <div class="weui_btn_area">
+            <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">确定</a>
+        </div>
+        <div class="weui_btn_area">
+            <a class="weui_btn weui_btn_primary" href="http://gwm.91shixing.com/_gwm/zhanghe/demo/01/order/" id="showTooltips">测试支付</a>
+        </div>
+    </div>
+{%- endblock %}
+
+{% block extra_js -%}
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script>
+    wx.config({
+        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: '{{ appId }}', // 必填，公众号的唯一标识
+        timestamp: {{ timestamp }}, // 必填，生成签名的时间戳
+        nonceStr: '{{ nonceStr }}', // 必填，生成签名的随机串
+        signature: '{{ signature }}',// 必填，签名，见附录1
+        jsApiList: [
+            'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo',
+            'hideMenuItems',
+            'showMenuItems',
+            'hideAllNonBaseMenuItem',
+            'showAllNonBaseMenuItem',
+            'translateVoice',
+            'startRecord',
+            'stopRecord',
+            'onRecordEnd',
+            'playVoice',
+            'pauseVoice',
+            'stopVoice',
+            'uploadVoice',
+            'downloadVoice',
+            'chooseImage',
+            'previewImage',
+            'uploadImage',
+            'downloadImage',
+            'getNetworkType',
+            'openLocation',
+            'getLocation',
+            'hideOptionMenu',
+            'showOptionMenu',
+            'closeWindow',
+            'scanQRCode',
+            'chooseWXPay',
+            'openProductSpecificView',
+            'addCard',
+            'chooseCard',
+            'openCard'
+        ]
+    });
+</script>
+
+<script src="{{ url_for('static', filename='js/zepto.min.js') }}"></script>
+<script>
+    wx.ready(function () {
+        // 5 图片接口
+        // 5.1 拍照、本地选图
+        var images = {
+            localId: [],
+            serverId: []
+        };
+
+        $('.weui_uploader_input_wrp').on('click', function () {
+            wx.chooseImage({
+                count: 8, // 默认9
+                //sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+                //sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                success: function (res) {
+                    var html_imgs = '';
+                    images.localId = res.localIds;
+                    $('#img_counts').html(images.localId.length);
+                    $.each(images.localId, function (i, value) {
+                        html_imgs += '<li class="weui_uploader_file" img_index="img_' + i + '" style="background-image:url(' + value + ')"></li>';
+                    });
+                    $('.weui_uploader_files').prepend(html_imgs);
+                    //图像选择之后绑定预览事件
+                    //$('.weui_uploader_file').on('click', function () {
+                    //    wx.previewImage({
+                    //        current: images.localId[parseInt($(this).attr("img_index").slice(4))], // 当前显示图片的http链接
+                    //        urls: images.localId // 需要预览的图片http链接列表
+                    //    });
+                    //});
+                }
+            });
+        });
+        // 5.3 上传图片 有效期3天
+        $('#uploadImage').on('click', function () {
+            if (images.localId.length == 0) {
+                alert('请先使用 chooseImage 接口选择图片');
+                return;
+            }
+            var i = 0, length = images.localId.length;
+            function upload() {
+                wx.uploadImage({
+                    localId: images.localId[i],
+                    success: function (res) {
+                        i++;
+                        alert('已上传：' + i + '/' + length);
+                        images.serverId.push(res.serverId);
+                        if (i < length) {
+                            upload();
+                        }
+                    },
+                    fail: function (res) {
+                        alert(JSON.stringify(res));
+                    }
+                });
+            }
+
+            upload();
+        });
+
+        $(document).on("click", ".weui_uploader_file", function () {
+            var img_obj = $(this);
+            var img_index = parseInt(img_obj.attr("img_index").slice(4));
+            $.actions({
+                title: "选择操作",
+                onClose: function () {
+                    console.log("close");
+                },
+                actions: [
+                    {
+                        text: "预览",
+                        className: "color-primary",
+                        onClick: function () {
+                            wx.previewImage({
+                                current: images.localId[img_index], // 当前显示图片的http链接
+                                urls: images.localId // 需要预览的图片http链接列表
+                            });
+                        }
+                    },
+                    {
+                        text: "删除",
+                        className: 'color-danger',
+                        onClick: function () {
+                            img_obj.remove();
+                            images.localId.splice(img_index, 1);
+                            $('#img_counts').html(images.localId.length);
+                        }
+                    }
+                ]
+            });
+        });
+
+    });
+    wx.error(function (res) {
+        alert(res.errMsg);
+    });
+</script>
+<script language="javascript">
+    $('.weui_textarea').on('keydown keyup', function () {
+        var totalCount = 200;
+        $('#text_counter').html(totalCount - $('#comment').val().length);
+    });
+</script>
+
+{%- endblock %}

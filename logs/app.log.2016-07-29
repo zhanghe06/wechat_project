@@ -1,0 +1,1862 @@
+2016-07-28 13:21:18,894 - app - File: weixin.py - line: 97 - wechat_auth() - INFO - V1001_GOOD
+2016-07-28 13:21:27,168 - app - File: weixin.py - line: 97 - wechat_auth() - INFO - V1001_TODAY_SINGER
+2016-07-28 23:44:49,469 - app - File: weixin.py - line: 472 - order_unified() - INFO - ImmutableMultiDict([('body', u'\u6d4b\u8bd5\u8ba2\u5355'), ('openid', u'xxxxxxx'), ('trade_type', u'JSAPI'), ('total_fee', u'10000'), ('out_trade_no', u'PO-001')])
+2016-07-28 23:51:33,822 - app - File: weixin.py - line: 472 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'xxxxxxx', 'trade_type': u'JSAPI', 'out_trade_no': u'PO-001', 'total_fee': u'10000'}
+2016-07-28 23:52:03,252 - app - File: weixin.py - line: 472 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'xxxxxxx', 'trade_type': u'JSAPI', 'out_trade_no': u'PO-001', 'total_fee': u'10000'}
+2016-07-29 00:29:46,868 - app - File: weixin.py - line: 489 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'xxxxxxx', 'trade_type': u'JSAPI', 'nonce_str': <function create_nonce_str at 0x7efe4d093de8>, 'sign': '31D528B42F2613F19EBEE9D9AF24A9F5', 'mch_id': '', 'out_trade_no': u'PO-001', 'total_fee': u'10000', 'appid': 'wx1cf9245f9f2cc40e', 'notify_url': 'http://zhanghe.ngrok.cc/weixin/pay_notify_callback', 'spbill_create_ip': '127.0.0.1'}
+2016-07-29 00:33:24,819 - app - File: weixin.py - line: 489 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'xxxxxxx', 'trade_type': u'JSAPI', 'nonce_str': 'CSv9UZLoVC50XqQj3JbRaBqRVFWlIHrt', 'sign': 'CAE2D9B7430035B57C94325EC04E3D01', 'mch_id': '', 'out_trade_no': u'PO-001', 'total_fee': u'10000', 'appid': 'wx1cf9245f9f2cc40e', 'notify_url': 'http://zhanghe.ngrok.cc/weixin/pay_notify_callback', 'spbill_create_ip': '127.0.0.1'}
+2016-07-29 09:12:07,729 - app - File: weixin.py - line: 489 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'xxxxxxx', 'trade_type': u'JSAPI', 'nonce_str': 'iw2rEgeSp23m1uIvFvixxKEjOS3xpEgb', 'sign': 'AB60CB19BC6E95F2881B07DA0F4C3C6A', 'mch_id': '', 'out_trade_no': u'PO-001', 'total_fee': u'10000', 'appid': 'wx1cf9245f9f2cc40e', 'notify_url': 'http://zhanghe.ngrok.cc/weixin/pay_notify_callback', 'spbill_create_ip': '192.168.2.121'}
+2016-07-29 09:13:13,615 - app - File: weixin.py - line: 489 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'xxxxxxx', 'trade_type': u'JSAPI', 'nonce_str': 'W5jZlR5DK6VqJZcU1e3lvdY1FshDtSaq', 'sign': '15BEF3C55D738967DB1E92EF95230FDF', 'mch_id': '', 'out_trade_no': u'PO-001', 'total_fee': u'10000', 'appid': 'wx1cf9245f9f2cc40e', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback', 'spbill_create_ip': '192.168.2.121'}
+2016-07-29 09:34:36,855 - app - File: weixin.py - line: 239 - get_code() - INFO - https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1cf9245f9f2cc40e&redirect_uri=http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fget_openid_access_token&response_type=code&scope=snsapi_base&state=1469756076.65&connect_redirect=1#wechat_redirect
+2016-07-29 09:50:15,445 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "Cverq-YEiM5YrJbjjAsQy4TShGC6_fQqwxTsEpcd0qgqjdMn5AVWHdF1dWgeTKSKsWihwo-hQvWUAkkffFHn6OgqE4CvIvfhoMmEs9Z9Av8", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "RAPQ8S_t2NhjGS9vwRHWlbETcCRnzqQrQ2bY_yH4gHeYh2vx1HLZNwPV0V66c38UlQDYwEab_qtor64s4yxipJ6cVdb9cJC0jF_77Kv0UkQ", "scope": "snsapi_base"}
+2016-07-29 09:52:48,640 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "Dhf0gFGpH6LUt-fQx50jZ3H6ZQ5ttTLi19kWxm6Gc9F1uYbsW-S7LeiX2oLrPIKqqiOGMDQ6rNM_MfUZQEj95SoQZPl4aaLbPimBluVoP7A", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "a_75aoOqB70m77JvyjwqfmSpuQxe1iuic1p-sVGfvpqo4M5-6HYyLWc7c3QupJj0Tl9M6-wwz1m5qikJw6I7bmq5ZfEY3h3DnOI3kE9jar4", "scope": "snsapi_base"}
+2016-07-29 09:55:37,207 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "a_75aoOqB70m77JvyjwqfpMGEWF_staUgiTf6L7XpcGF6Ogrts8Hs75o1qM9UDlesKntu72-6EUCTkAoIuvsP1jS1RiWJxeVC-wDUgmWSk4", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "SefwfWsq-zXTeWXECwlekdF9c2GJI5FvRTR9phP3_MlYVtFJKYXbBK3B1TMj6PM-jfeLkdSBbIe4QCkuKUt4biR_nK-a0vkTcmYdWNxAM_M", "scope": "snsapi_base"}
+2016-07-29 10:09:32,282 - app - File: weixin.py - line: 493 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': '0ENszsuY2c9Oh7pxj2MCFoKVl8dnNJrB', 'sign': '9D1BBD8519B45B57B32604A51E10E7A9', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469758161.97', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/wx/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 10:16:07,179 - app - File: weixin.py - line: 493 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': '3TWNIFUrZPxErUUF443HMuQjyKx5ijrj', 'sign': 'EE2C91F052018A84B99B6A853DDF0442', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469758558.32', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/wx/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 10:18:04,448 - app - File: weixin.py - line: 493 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': 'YsSR7Q0vYEccRyRyiD65b7xAe3iEPOra', 'sign': '0E056B895D928B9175AF286CE98DCEB6', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469758674.65', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 10:37:06,797 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "tB4rU_58yC8hJRO6fFhPynuVNFfNFiCflykExK7euZANo32-tSANMfmb933ImLns3VD17KluQflCZN1C0-LdL4_XCbZEqNVTAPRrA9eo9IM", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "_TFxwKb31lS5NO4__sYVBhwzVLBqRt4Cq5IKbdfdTsw2QJ1XIcgpUFIVF5GFEa-_bUesS6Yb8BxcePSOWAyDhTmFDhXElnJ7o-rtVuZyQeM", "scope": "snsapi_base"}
+2016-07-29 10:38:41,484 - app - File: weixin.py - line: 493 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': 'QY2uA2ewKaS1GEPGpSblO45JqVk7Nbba', 'sign': 'E3F67A57513836A0550BD779C738405E', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469759827.55', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 11:09:53,940 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "1IGi6k10bEkR1DpV-e3WsbL-y71ggtYTfr26Tbu2Sx93dyuH_1Cq-cUmGf8tpnXS0okL_oBmkrx8sr2QvvLS1nyNoGe6_UB9B5wbeR-yVds", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "iu-LHkO1BXe43ZEtx2m7v1X4QEQraGqKBdlNTR-DsJ1FF3qAoNS2c8eWZzuXoa_tuEsLKXjNNRX-ks1ZTgn07JZkRyUx1wHInRLFOWgoBeE", "scope": "snsapi_base"}
+2016-07-29 11:11:23,063 - app - File: weixin.py - line: 493 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': 'V2Qv94g5ENhgsZI2pNz7IlvjVANLUXI1', 'sign': '9393F2456913166430B761D144226C54', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469761878.55', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 11:15:10,816 - app - File: weixin.py - line: 493 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': 'SZjE5lyfp0D4bSoS45BcXQn1bIJaJWZT', 'sign': '1A2411556919E4EA6B135EEFAC4DEABA', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469762107.06', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 11:17:56,020 - app - File: weixin.py - line: 493 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': 'nT14iiwJrRFdYFggC6ER7paTPm933FIa', 'sign': '7F22836B945C06C1FAEF30CCE87EC1F5', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469762272.25', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 11:18:52,290 - app - File: weixin.py - line: 497 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': 'EN5tqUlsUtw7EP7nl3vBjZmzVRnPFaoZ', 'sign': 'CEB5305C88D761EB7FCAA432117B61E5', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469762328.43', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 11:20:53,743 - app - File: weixin.py - line: 493 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': 'wshvUUpv5LtCQZRG8JJPX5OCv09m4wQK', 'sign': '0ECB8CD7CC458D41B66D373521BA4ECB', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469762450.33', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 11:20:54,001 - app - File: weixin.py - line: 499 - order_unified() - INFO - {
+    "return_code": "FAIL", 
+    "return_msg": "ç­¾åéè¯¯"
+}
+2016-07-29 11:21:51,532 - app - File: weixin.py - line: 493 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': '3RwWWiyAQgq7o59rXH0xVXUndhlcCpgq', 'sign': 'DC732F5C54B492E4C0CA62FC2DC9642D', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469762507.43', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 11:21:51,770 - app - File: weixin.py - line: 499 - order_unified() - INFO - {
+    "return_code": "FAIL", 
+    "return_msg": "ç­¾åéè¯¯"
+}
+2016-07-29 11:21:51,771 - app - File: weixin.py - line: 500 - order_unified() - INFO - u'\xe7\xad\xbe\xe5\x90\x8d\xe9\x94\x99\xe8\xaf\xaf'
+2016-07-29 11:24:15,704 - app - File: weixin.py - line: 493 - order_unified() - INFO - {'body': u'\u6d4b\u8bd5\u8ba2\u5355', 'openid': u'oGFpJw2sxvsfck-d-XpEtmy01CyY', 'trade_type': u'JSAPI', 'nonce_str': 'jIaPLK2qhEbi72nlqgsfc0SaGsyOgxUG', 'sign': '83962099CD4484690D8E10D79843E598', 'mch_id': '1369038602', 'out_trade_no': u'PO-0011469762652.42', 'total_fee': u'10000', 'appid': 'wxa679229655ae5be3', 'notify_url': 'http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/', 'spbill_create_ip': u'101.231.185.66'}
+2016-07-29 11:24:15,950 - app - File: weixin.py - line: 500 - order_unified() - INFO - {
+    "return_code": "FAIL", 
+    "return_msg": "签名错误"
+}
+2016-07-29 11:24:15,951 - app - File: weixin.py - line: 501 - order_unified() - INFO - u'\u7b7e\u540d\u9519\u8bef'
+2016-07-29 11:29:13,570 - app - File: weixin.py - line: 493 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "MxesuE65GYSo9djsMwTkzCD9XpAGqAIC", 
+    "sign": "358F65F511BFB46765EA1ACAC4D31705", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO-0011469762949.54", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 11:44:05,974 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "Cz5yNSY5A3_ebgihTnedY4p360EwjScu0y-vpfaECwALK47oxFvflR8J4Xz1M3EsdazH9nYbvbf9NVudJ55fFMtTHPCNsXTNoM9RHpTKpD8", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "hfyQF1REBAQY00IXEkCt2ASywmgP-KqQjHHBFtK0DhDhhuy2_I4_Rnxx_Q5LdVz1hvcGC6_bxaONPH8h4xYJaRBh-4d7LwEB4t7t-3Mk7vs", "scope": "snsapi_base"}
+2016-07-29 11:45:42,907 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "8Bn2EUWWtllfvkxHNQ62TAgQMs2y_bpexWUGZJAnBaHLU-GZSET0zO8rw7NH8jMiAw39WS9EL6B3RraGJhrgXNib7ePlKf2Tjz3jOuxBwgI", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "PiU66S3RB8fu53QcieWwhcEB6wJDLKdRoNv8KZvUp-pjwES4t7A-2yqW5KPr6wvuvokDTX5xZNTS3zaWQAV0pJUNJzG3uTfo_5lW44P6iEM", "scope": "snsapi_base"}
+2016-07-29 11:47:00,010 - app - File: weixin.py - line: 476 - order_unified() - INFO - {}
+2016-07-29 11:47:00,015 - app - File: weixin.py - line: 495 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "3yRFzkSLSz4541btiv6CLorLvK4XGmeW", 
+    "sign": "F023B463AE4821C139CFD611568F69F4", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO-0011469764007.13", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 11:56:36,711 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "HyB3Y7NPtfYlj7j8H860njT42OCh8yxEusiXiipLUEJ8JxQjxPy8480Vi7fJmpaVZx3zdmUbgBTU9D9VJFVNHhSeubqYJD_jfHvJmIzDfTw", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "eArniGUfo9Tql_ZS88qsV_TwMmpMcwN0w8_AAfjLuvfMLr5jv5wMPyzBcfsqUYqmTmTRHNzdNUVDpJ2PKgVPIFB0XV86FjUN1AUjT3NuLg4", "scope": "snsapi_base"}
+2016-07-29 12:56:58,000 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "bn5MK332sR2TWMoVYCfGZP49A-9-AdqeU40oPd3FCWZFHPU-KgW7CU5EmOODUW-MJVSj_ktCVO_ZpMKj0QhInMoC5GWW-Q2D2imX9bjxRDs", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "7wx1S8g8QphRT6RGN8T4GZSDhAa8K-8MrK_KTJziwjDj8OnCe5JkcLvfL9JQQIesU4JwopJHKbC8Xq_lxur8lcMWH1GZp3s5n-nD3xt7D6s", "scope": "snsapi_base"}
+2016-07-29 12:57:02,864 - app - File: weixin.py - line: 493 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "pPWVEQY3aJofjB6AXKoB9kGM7dVh5rw3", 
+    "sign": "4725EF14BDA9E2DF0B4D8E9D9F14878A", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO-0011469768218.43", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 12:57:02,865 - app - File: weixin.py - line: 495 - order_unified() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[pPWVEQY3aJofjB6AXKoB9kGM7dVh5rw3]]></nonce_str><sign><![CDATA[4725EF14BDA9E2DF0B4D8E9D9F14878A]]></sign><mch_id>1369038602</mch_id><out_trade_no><![CDATA[PO-0011469768218.43]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 13:01:04,781 - app - File: weixin.py - line: 493 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "5gdTbyNfLVcO9myXIzaYi77hkkWbdSzb", 
+    "sign": "F1DEA840E195D1669D783CD22DA58086", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO-0011469768458.44", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:01:04,782 - app - File: weixin.py - line: 495 - order_unified() - INFO - <xml><body>测试订单</body><openid>oGFpJw2sxvsfck-d-XpEtmy01CyY</openid><trade_type>JSAPI</trade_type><nonce_str>5gdTbyNfLVcO9myXIzaYi77hkkWbdSzb</nonce_str><sign>F1DEA840E195D1669D783CD22DA58086</sign><mch_id>1369038602</mch_id><out_trade_no>PO-0011469768458.44</out_trade_no><total_fee>10000</total_fee><appid>wxa679229655ae5be3</appid><notify_url>http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/</notify_url><spbill_create_ip>101.231.185.66</spbill_create_ip></xml>
+2016-07-29 13:03:03,091 - app - File: weixin.py - line: 493 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "NeIw62JLmPemugPVgGDhpU1fWYBFpTGx", 
+    "sign": "FCC3E4F82BF12A8F7A8EEE1D834936B6", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO-0011469768579.53", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:03:03,092 - app - File: weixin.py - line: 495 - order_unified() - INFO - <xml><body>测试订单</body><openid>oGFpJw2sxvsfck-d-XpEtmy01CyY</openid><trade_type>JSAPI</trade_type><nonce_str>NeIw62JLmPemugPVgGDhpU1fWYBFpTGx</nonce_str><sign>FCC3E4F82BF12A8F7A8EEE1D834936B6</sign><mch_id>1369038602</mch_id><out_trade_no>PO-0011469768579.53</out_trade_no><total_fee>10000</total_fee><appid>wxa679229655ae5be3</appid><notify_url>http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/</notify_url><spbill_create_ip>101.231.185.66</spbill_create_ip></xml>
+2016-07-29 13:39:35,151 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "bn5MK332sR2TWMoVYCfGZKDSpEODF1uodDa1-KZGic71gZQBVEX73Z5oGhwb6hgikYWm1zHOK9dwSMI9AfAeX-lBQMzY_BLo4d9DQ1YuIjY", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "_TFxwKb31lS5NO4__sYVBmrCnLBWKtJk27s_8mdlsqvg9TrbGidHV1cTxWr5-DZ6CavdS9cXsyYI3VbGqplis3GZqCDuRpI5Eaf9W6BhaRw", "scope": "snsapi_base"}
+2016-07-29 13:40:28,602 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "xv0hSs1TQVFVZLWs64HHXMrDMMi9chL5", 
+    "sign": "7DCDC08D74D31E07FC74E961888B4743", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO-0011469770775.56", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:40:28,603 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[xv0hSs1TQVFVZLWs64HHXMrDMMi9chL5]]></nonce_str><sign><![CDATA[7DCDC08D74D31E07FC74E961888B4743]]></sign><mch_id><![CDATA[1369038602]]></mch_id><out_trade_no><![CDATA[PO-0011469770775.56]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 13:44:10,263 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "EBZlj6aYhlrRHpCY39hedD6b9bh6ssgBLozOju_TiP97cDkY3_5vLxfhPW6AzPJI2knyurbG2gtWVlN6twUakjftlssc8_OxQJ_tGsbZ-Dw", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "mp_dgjUt15_8_wVJ3g0DcQ3td9W-TBrOMyZDsfe1TDQaf7kdPTRw8UvplOzXqP2Y2d0Uc5ib9dhLfXlXYH9GlBGm1zluDRVttTmo5iSqGCc", "scope": "snsapi_base"}
+2016-07-29 13:44:15,875 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "n4Q0hT79ofSKyMuWCWJMCfdUfK3cULvy", 
+    "sign": "EB8DAE5238B3694A691308E589043156", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO0011469771050.58", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:44:15,876 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[n4Q0hT79ofSKyMuWCWJMCfdUfK3cULvy]]></nonce_str><sign><![CDATA[EB8DAE5238B3694A691308E589043156]]></sign><mch_id><![CDATA[1369038602]]></mch_id><out_trade_no><![CDATA[PO0011469771050.58]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 13:47:16,887 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "852jAs1IP1W2YZAAXSjjh0R36VNFfhF4", 
+    "sign": "A0469C75D3B6354E281934D14E45AB4F", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO0011469771231.83", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:47:16,888 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[852jAs1IP1W2YZAAXSjjh0R36VNFfhF4]]></nonce_str><sign><![CDATA[A0469C75D3B6354E281934D14E45AB4F]]></sign><mch_id><![CDATA[1369038602]]></mch_id><out_trade_no><![CDATA[PO0011469771231.83]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 13:48:07,486 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "0ieALAODaU4bpypFf5Yd4E5aa5KG3IFz", 
+    "sign": "A55295DD42FB11FE3B6EF023C08028B5", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO0011469771283.49", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:48:07,487 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[0ieALAODaU4bpypFf5Yd4E5aa5KG3IFz]]></nonce_str><sign><![CDATA[A55295DD42FB11FE3B6EF023C08028B5]]></sign><mch_id><![CDATA[1369038602]]></mch_id><out_trade_no><![CDATA[PO0011469771283.49]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 13:49:28,076 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 13:49:32,135 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "W6kWFTDofz1qx07mRlpir6WQ6kEAPZMC", 
+    "sign": "B79F299B46814D64533D9D4286C08910", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO0011469771368.08", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:49:32,139 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[W6kWFTDofz1qx07mRlpir6WQ6kEAPZMC]]></nonce_str><sign><![CDATA[B79F299B46814D64533D9D4286C08910]]></sign><mch_id><![CDATA[1369038602]]></mch_id><out_trade_no><![CDATA[PO0011469771368.08]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 13:50:35,417 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 13:51:34,340 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "rFQiRJU0Po5XXgDo4TLqj7A8Sorvvpqu", 
+    "sign": "F046BA2CA2251671AD63FC99B4F4B93A", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO0011469771435.42", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:51:34,341 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[rFQiRJU0Po5XXgDo4TLqj7A8Sorvvpqu]]></nonce_str><sign><![CDATA[F046BA2CA2251671AD63FC99B4F4B93A]]></sign><mch_id><![CDATA[1369038602]]></mch_id><out_trade_no><![CDATA[PO0011469771435.42]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 13:51:38,620 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order
+2016-07-29 13:51:42,180 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "s6X0g9VEil3ex12Ny0ihEdePtoQNHEBy", 
+    "sign": "265FBBEE5D4D26DF1DEF8576009F8CA3", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO0011469771498.62", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:51:42,181 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[s6X0g9VEil3ex12Ny0ihEdePtoQNHEBy]]></nonce_str><sign><![CDATA[265FBBEE5D4D26DF1DEF8576009F8CA3]]></sign><mch_id><![CDATA[1369038602]]></mch_id><out_trade_no><![CDATA[PO0011469771498.62]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 13:52:13,408 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 13:52:50,983 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "lTWaKB5pth4U8QDa6sIKGs6zLcsBpWRD", 
+    "sign": "B75CE86D8ED070D1DFAF0C3E05245322", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO0011469771533.41", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:52:50,984 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[lTWaKB5pth4U8QDa6sIKGs6zLcsBpWRD]]></nonce_str><sign><![CDATA[B75CE86D8ED070D1DFAF0C3E05245322]]></sign><mch_id><![CDATA[1369038602]]></mch_id><out_trade_no><![CDATA[PO0011469771533.41]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 13:52:55,815 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 13:53:00,142 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "IlLqTF2QJW3w53vEW37676vt8DTpqZQy", 
+    "sign": "A7A46400D10E50914D593F97B141608D", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO0011469771575.82", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:53:00,144 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[IlLqTF2QJW3w53vEW37676vt8DTpqZQy]]></nonce_str><sign><![CDATA[A7A46400D10E50914D593F97B141608D]]></sign><mch_id><![CDATA[1369038602]]></mch_id><out_trade_no><![CDATA[PO0011469771575.82]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 13:53:40,632 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 13:53:45,303 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "VShtcMlbu4wN78o91QrE4fNGsdilkwiN", 
+    "sign": "5F7EDBAA3B10DEED53CA9469DAE98329", 
+    "mch_id": "1369038602", 
+    "out_trade_no": "PO0011469771620.63", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 13:53:45,304 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[VShtcMlbu4wN78o91QrE4fNGsdilkwiN]]></nonce_str><sign><![CDATA[5F7EDBAA3B10DEED53CA9469DAE98329]]></sign><mch_id><![CDATA[1369038602]]></mch_id><out_trade_no><![CDATA[PO0011469771620.63]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 14:42:53,579 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "hfyQF1REBAQY00IXEkCt2GjEIcjnv2Dbu-2P3ZWacyQ1CO0AXHMUV0NrDZu3U_oOgVaxX5VgQcLEWoj1EUu7_QLnN8rNPxLBUyXLEqlAoHc", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "XAcmb--QfYSFSSWmUY-9BuldH96Sdc_x3T81t_n_fvLRdfy2yOan41SNx9n4a2qY4UD5qVmwuRMRZgwQf12WDAdzbZLkDNpHhDkeqhuzYwA", "scope": "snsapi_base"}
+2016-07-29 14:42:53,985 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 14:42:58,215 - app - File: weixin.py - line: 498 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "IfD8W52kH5PBlF7LCKcbjbk6zRFxX6lf", 
+    "mch_id": "1369038602", 
+    "sign": "8C6EF3AB825618B0D7B0C570C0FAD418", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469774574.0", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 14:42:58,216 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[IfD8W52kH5PBlF7LCKcbjbk6zRFxX6lf]]></nonce_str><mch_id><![CDATA[1369038602]]></mch_id><sign><![CDATA[8C6EF3AB825618B0D7B0C570C0FAD418]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469774574.0]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 14:52:21,691 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 14:52:25,267 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "ER6bFM1haD9XOBq3wQSQ8ESize0PdwYr", 
+    "mch_id": "1369038602", 
+    "sign": "FB7D5204308ADE2EC03F6CBBED5D19D1", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469775141.69", 
+    "total_fee": 10000, 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 14:52:25,278 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[ER6bFM1haD9XOBq3wQSQ8ESize0PdwYr]]></nonce_str><mch_id><![CDATA[1369038602]]></mch_id><sign><![CDATA[FB7D5204308ADE2EC03F6CBBED5D19D1]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469775141.69]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback/]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 14:57:38,596 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 14:57:42,300 - app - File: weixin.py - line: 495 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "Zr7uJzZoEaMSxzMw9IVbvN308kyfRRL3", 
+    "mch_id": "1369038602", 
+    "sign": "EEB31C436FF381AB3B149F414FBBAA7E", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469775458.6", 
+    "total_fee": 10000, 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 14:57:42,300 - app - File: weixin.py - line: 497 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[Zr7uJzZoEaMSxzMw9IVbvN308kyfRRL3]]></nonce_str><mch_id><![CDATA[1369038602]]></mch_id><sign><![CDATA[EEB31C436FF381AB3B149F414FBBAA7E]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469775458.6]]></out_trade_no><total_fee><![CDATA[10000]]></total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:02:18,819 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:02:21,992 - app - File: weixin.py - line: 495 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "mhFDOKv0cSn3fSqcAiSrqRtinheOZkQ4", 
+    "mch_id": "1369038602", 
+    "sign": "F43F99277CD310A21C281FD57D7666D6", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469775738.82", 
+    "total_fee": 10000, 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:03:29,721 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:03:37,048 - app - File: weixin.py - line: 495 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "nlJ23rDFZS33tnES1VN0drb7EJeM87zU", 
+    "mch_id": "1369038602", 
+    "sign": "D0BEC108F90D422F0BA2640E25BF6C7F", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469775809.73", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:03:37,048 - app - File: weixin.py - line: 497 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[nlJ23rDFZS33tnES1VN0drb7EJeM87zU]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[D0BEC108F90D422F0BA2640E25BF6C7F]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469775809.73]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:05:55,248 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:05:58,914 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "1wUl2pb5GThc02lBorYkvCmRJ7JbcczE", 
+    "mch_id": "1369038602", 
+    "sign": "16366C4EC10A5BBFEC082B07245BD133", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469775955.25", 
+    "total_fee": "10000", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:05:58,915 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[1wUl2pb5GThc02lBorYkvCmRJ7JbcczE]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[16366C4EC10A5BBFEC082B07245BD133]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469775955.25]]></out_trade_no><total_fee>10000</total_fee><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:18:50,806 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:18:54,647 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "lwXbSu3JnturrvYNhQwNv2Ug5h90NyJG", 
+    "mch_id": "1369038602", 
+    "sign": "9496940B872D1175572C612AF5F6F008", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469776730.81", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:18:54,648 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[lwXbSu3JnturrvYNhQwNv2Ug5h90NyJG]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[9496940B872D1175572C612AF5F6F008]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469776730.81]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:25:17,948 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:25:22,696 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "oKFK66QwO8nmV3b3oVli9BU1Q22SqLYE", 
+    "mch_id": "1369038602", 
+    "sign": "0A24AF4D64DA3E6BE384C5ED6A8AAE62", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469777117.95", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:25:22,697 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[oKFK66QwO8nmV3b3oVli9BU1Q22SqLYE]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[0A24AF4D64DA3E6BE384C5ED6A8AAE62]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469777117.95]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:27:24,273 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "_de5b41mlKcgj63SA2nep9AcusxXXuT7tN6XPsQY5BY-aT4qu58opWPlCgiBppK3RrGPoSoj_BihhsE4AsfNSV7fituDciYWTD8s4d9mLew", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "8Bn2EUWWtllfvkxHNQ62TEhMYuwVhOluOFtdCybDVv_riVt9msX5LZ-hAPUxq5L41YkynxcgI4K5LcwJzX6UVDXGo5vJM-54uT-UNKExceg", "scope": "snsapi_base"}
+2016-07-29 15:27:24,575 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:27:28,827 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "cNJ7wCKmq1ofg0ILSlz8pp8pUoikXKTZ", 
+    "mch_id": "1369038602", 
+    "sign": "2E39B9761482CEBC4ED27D40C9D7EEA8", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469777244.58", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:27:28,828 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[cNJ7wCKmq1ofg0ILSlz8pp8pUoikXKTZ]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[2E39B9761482CEBC4ED27D40C9D7EEA8]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469777244.58]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:48:33,961 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:49:27,631 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:50:21,490 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:51:29,249 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:52:27,525 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:52:33,291 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "R41FGAnluNm4OKvXyzpsodcQ8U4ip847", 
+    "mch_id": "1369038602", 
+    "sign": "1E8A2DB278C671817877CC4DC5037A15", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469778747.53", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:52:33,292 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[R41FGAnluNm4OKvXyzpsodcQ8U4ip847]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[1E8A2DB278C671817877CC4DC5037A15]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469778747.53]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:54:01,971 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:54:07,890 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "o04YGgalkaemgcdXyXIpjqkmIRyOcdSw", 
+    "mch_id": "1369038602", 
+    "sign": "D53BD5BF08ABA3E57748D57345A66C19", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469778841.97", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:54:07,891 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[o04YGgalkaemgcdXyXIpjqkmIRyOcdSw]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[D53BD5BF08ABA3E57748D57345A66C19]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469778841.97]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:54:45,248 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:54:50,383 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "jMzNIJ8xD7QGy6hQpGDXVTxPfDTiNgzn", 
+    "mch_id": "1369038602", 
+    "sign": "C12309E98DAB62E293E896D3D9237308", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469778885.25", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:54:50,384 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[jMzNIJ8xD7QGy6hQpGDXVTxPfDTiNgzn]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[C12309E98DAB62E293E896D3D9237308]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469778885.25]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:55:18,299 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:55:24,971 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "NXyYB9XYX7zcUTdJ7H62MPlChv4983qV", 
+    "mch_id": "1369038602", 
+    "sign": "4D67CB04A28964A1FA5231D3DFA1014A", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469778918.3", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:55:24,972 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[NXyYB9XYX7zcUTdJ7H62MPlChv4983qV]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[4D67CB04A28964A1FA5231D3DFA1014A]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469778918.3]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:56:27,920 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:56:32,138 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "kUiEOeiR48yMsfEuca0FvTcV7qmmjwEq", 
+    "mch_id": "1369038602", 
+    "sign": "E11BE37C1A621598C82D86D2000EB5E4", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469778987.92", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:56:32,144 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[kUiEOeiR48yMsfEuca0FvTcV7qmmjwEq]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[E11BE37C1A621598C82D86D2000EB5E4]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469778987.92]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:56:32,424 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 15:58:02,941 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:58:07,118 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "u5aSYjs8t7mkNyggKYjgbyzrqlw0HXlR", 
+    "mch_id": "1369038602", 
+    "sign": "F630A7E923E6253C5AADC6CDE438F013", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469779082.94", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:58:07,119 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[u5aSYjs8t7mkNyggKYjgbyzrqlw0HXlR]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[F630A7E923E6253C5AADC6CDE438F013]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469779082.94]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:58:07,350 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 15:59:05,708 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 15:59:09,779 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "ZphLpgjQvv9baDcGHvaL5hEiB0Lv8tFF", 
+    "mch_id": "1369038602", 
+    "sign": "0E7121C8476C89AAE70A648C9F0BEFF1", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469779145.71", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 15:59:09,780 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[ZphLpgjQvv9baDcGHvaL5hEiB0Lv8tFF]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[0E7121C8476C89AAE70A648C9F0BEFF1]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469779145.71]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 15:59:10,038 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 15:59:10,041 - app - File: weixin.py - line: 501 - order_unified() - INFO - <type 'unicode'>
+2016-07-29 16:00:34,943 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:00:39,208 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "YJtL3BfhB4atneAnaHOUnSAtEPdL1MLl", 
+    "mch_id": "1369038602", 
+    "sign": "B1177F4AC90CB9CD2F42303E9E27AA13", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469779234.94", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:00:39,210 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[YJtL3BfhB4atneAnaHOUnSAtEPdL1MLl]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[B1177F4AC90CB9CD2F42303E9E27AA13]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469779234.94]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:00:39,472 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:00:39,474 - app - File: weixin.py - line: 501 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:09:03,398 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:09:07,749 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "d2LcToprqm4g8k8R7txfHrqGBlYxK7jU", 
+    "mch_id": "1369038602", 
+    "sign": "111BB5C86AAD5F0D6D4D3FEF71071C00", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469779743.4", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:09:07,751 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[d2LcToprqm4g8k8R7txfHrqGBlYxK7jU]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[111BB5C86AAD5F0D6D4D3FEF71071C00]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469779743.4]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:09:07,994 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:09:07,998 - app - File: weixin.py - line: 501 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:10:16,290 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:10:21,226 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "k5cleOp2cUz9jSYRdy5cqVfoYaVhKESc", 
+    "mch_id": "1369038602", 
+    "sign": "EE77F3FB5369CD8C6BDE88EE49C5BA0C", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469779816.29", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:10:21,236 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[k5cleOp2cUz9jSYRdy5cqVfoYaVhKESc]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[EE77F3FB5369CD8C6BDE88EE49C5BA0C]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469779816.29]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:10:21,492 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:10:21,494 - app - File: weixin.py - line: 501 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:13:39,030 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:13:42,951 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "TTokhCbScwlkIL10PWaR7c4afDLrFLZ8", 
+    "mch_id": "1369038602", 
+    "sign": "C5B2830B56C746544D87E27123D56571", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469780019.03", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:13:42,953 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[TTokhCbScwlkIL10PWaR7c4afDLrFLZ8]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[C5B2830B56C746544D87E27123D56571]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469780019.03]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:13:43,208 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:13:43,210 - app - File: weixin.py - line: 501 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:15:25,438 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:15:29,835 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "RtDa9ofWe13OR8J2rUOIQzpALtbRbaPZ", 
+    "mch_id": "1369038602", 
+    "sign": "15FB242E6EC74D26EA71C32FF8CDCC44", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469780125.44", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:15:29,836 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[RtDa9ofWe13OR8J2rUOIQzpALtbRbaPZ]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[15FB242E6EC74D26EA71C32FF8CDCC44]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469780125.44]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:15:30,114 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:15:30,116 - app - File: weixin.py - line: 501 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:16:41,856 - app - File: weixin.py - line: 273 - get_openid_access_token() - INFO - {"access_token": "Uj2KKcBSVL2Pb12TfnQw7qxPamPLykddLarP9CcdrCU674-2F6YEdFsYho9GRm08sDKtV0r0fVz3yvDXsaf0jmnLASMAJMvLNKSDMeUqCys", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "yIWsLBK2XT9Bqq_0FsGRofxqBU1CJBknH0pWDqgmZmx1k3J-WtM2wrLS2H50KTkOdO-kzqld4SS8Fz5_dcf47TKRSxD7gwmuL-RghlojqCI", "scope": "snsapi_base"}
+2016-07-29 16:16:42,034 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:16:46,066 - app - File: weixin.py - line: 494 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "P5ZFRXKs8tSgKIPLZQeB5Rm1VU7yS2ah", 
+    "mch_id": "1369038602", 
+    "sign": "64F9BA78CD705188A667296ECA5EACE2", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469780202.04", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:16:46,067 - app - File: weixin.py - line: 496 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[P5ZFRXKs8tSgKIPLZQeB5Rm1VU7yS2ah]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[64F9BA78CD705188A667296ECA5EACE2]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469780202.04]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:16:46,311 - app - File: weixin.py - line: 500 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:16:46,313 - app - File: weixin.py - line: 501 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:18:21,683 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:18:26,421 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "GATL8pLJVB0dGHWyaIQGkrbxo2J2XYbv", 
+    "mch_id": "1369038602", 
+    "sign": "EBB8014853482B2EF1C64AFFED33945E", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469780301.68", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:18:26,422 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[GATL8pLJVB0dGHWyaIQGkrbxo2J2XYbv]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[EBB8014853482B2EF1C64AFFED33945E]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469780301.68]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:18:26,661 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:18:26,664 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:27:01,096 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:27:08,212 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "CFsdhvKQITfJvwzCEDWW6hscv3N0VBh8", 
+    "mch_id": "1369038602", 
+    "sign": "E99989D86954C4E839959D6E734FB1AC", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469780821.1", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:27:08,213 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[CFsdhvKQITfJvwzCEDWW6hscv3N0VBh8]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[E99989D86954C4E839959D6E734FB1AC]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469780821.1]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:27:08,438 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:27:08,440 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:32:37,604 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:32:42,302 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "UClnccpXE8q3uCDycGCOgsvPz7wyzuCN", 
+    "mch_id": "1369038602", 
+    "sign": "8D32943DA494D3BE9C7A026DCD8883CC", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469781157.61", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:32:42,303 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[UClnccpXE8q3uCDycGCOgsvPz7wyzuCN]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[8D32943DA494D3BE9C7A026DCD8883CC]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469781157.61]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:32:42,557 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:32:42,562 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:33:36,532 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:33:40,322 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "UZK9LLqIRMwg2cyGoHz9X9SwtqleAe7U", 
+    "mch_id": "1369038602", 
+    "sign": "906327DEF688B445E9FED37659AAED2A", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469781216.53", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:33:40,324 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[UZK9LLqIRMwg2cyGoHz9X9SwtqleAe7U]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[906327DEF688B445E9FED37659AAED2A]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469781216.53]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:33:40,563 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:33:40,566 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:33:42,721 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:34:00,719 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:36:41,703 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:36:47,680 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "WosPoRuuqJKd0RjOJxJd48tuMRZ8596U", 
+    "mch_id": "1369038602", 
+    "sign": "E8ED9B37950CAF52B7D3F265C426ED35", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469781401.7", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:36:47,681 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[WosPoRuuqJKd0RjOJxJd48tuMRZ8596U]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[E8ED9B37950CAF52B7D3F265C426ED35]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469781401.7]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:36:47,953 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:36:47,955 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:38:46,351 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:38:50,616 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "Xx8X216aWP6AmOzJBjUM0N2jcNtsiBCk", 
+    "mch_id": "1369038602", 
+    "sign": "BE420DD22B1BA7D741F0D733BC7FAC08", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469781526.35", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:38:50,617 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[Xx8X216aWP6AmOzJBjUM0N2jcNtsiBCk]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[BE420DD22B1BA7D741F0D733BC7FAC08]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469781526.35]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:38:50,860 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:38:50,862 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:40:45,135 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:40:50,808 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "Bn7hxv5iR7EkSEIOzkUWaorDiecozHNN", 
+    "mch_id": "1369038602", 
+    "sign": "0E2E8EC36C87C51936EC749AFB7B29DB", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469781645.14", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:40:50,809 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[Bn7hxv5iR7EkSEIOzkUWaorDiecozHNN]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[0E2E8EC36C87C51936EC749AFB7B29DB]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469781645.14]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:40:51,050 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:40:51,052 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 16:52:02,880 - app - File: weixin.py - line: 276 - get_openid_access_token() - INFO - {"access_token": "Dhf0gFGpH6LUt-fQx50jZ95rICbR7wLvkxwMlETPROMjgwMfJXbw6ARKBTTkmc81c1dsE2qdHJhZzQhOHLT8mjw8HdkmKENLdkMw9pjBeiA", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "DjWiWLOsBicJwdFl4eG2TlvA3JEiWzGjbKOLNtwB-t1yCdQnwWIZnRiw8i7Wy2KF-21Gbo_f5Q0OnLZtcnKlVieXXv-pAswzUqoc-dW7Ogk", "scope": "snsapi_base"}
+2016-07-29 16:52:03,146 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 16:52:09,779 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "RnKXniclntTJTni7qxSYoypU5fwHid1y", 
+    "mch_id": "1369038602", 
+    "sign": "D61DF3209A1C43408B2A7CFB2AA1F36D", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 16:52:09,780 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[RnKXniclntTJTni7qxSYoypU5fwHid1y]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[D61DF3209A1C43408B2A7CFB2AA1F36D]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http%3A%2F%2Fgwm.91shixing.com%2F_gwm%2Fzhanghe%2Fweixin%2Fpay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 16:52:10,025 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 16:52:10,027 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 17:08:22,726 - app - File: weixin.py - line: 276 - get_openid_access_token() - INFO - {"access_token": "4fpzuvfepUnPAn5O97CAkF68rsx7u2h3bP4wJeaSnGlkLfxGFy2fDtXmsIWDIxhNiB6WrEMaHdrEDHIEjo0My_pNRs05th9WqU1t5c8iUAg", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "LLE9ci3eQTsFGY61mxAQEjHxAuLIEPSGA5PiiMR6U4l79icq0KEIMobsWPVCQzZt_kU3trPWlLlGnPf0RfR7vsa-pIlBFgfRdVjK1biiUbM", "scope": "snsapi_base"}
+2016-07-29 17:08:23,035 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:08:27,995 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "9M8Nqj3IEerwwPlDBKOnCvZRrX5PmSpF", 
+    "mch_id": "1369038602", 
+    "sign": "CDDC9BF3CD332B30BA984B2DAFE2AB9C", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 17:08:28,002 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[9M8Nqj3IEerwwPlDBKOnCvZRrX5PmSpF]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[CDDC9BF3CD332B30BA984B2DAFE2AB9C]]></sign><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 17:08:28,311 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 17:08:28,313 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 17:23:06,241 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:23:10,438 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "npMYSKLoTiu8ukcgWkKpX8rEPSAJUvv6", 
+    "mch_id": "1369038602", 
+    "sign": "D4C41EFE4FDFC0AE5C4AB3000BB42078", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 17:23:10,439 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[npMYSKLoTiu8ukcgWkKpX8rEPSAJUvv6]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[D4C41EFE4FDFC0AE5C4AB3000BB42078]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 17:23:10,681 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 17:23:10,683 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 17:25:52,427 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:25:59,296 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "cOnM31DX1j31jqSSYl6gW7Zx7JLNF3RL", 
+    "mch_id": "1369038602", 
+    "sign": "835BCCBF8A976E2B29DEA5C63FDE02E5", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 17:25:59,297 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[cOnM31DX1j31jqSSYl6gW7Zx7JLNF3RL]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[835BCCBF8A976E2B29DEA5C63FDE02E5]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 17:25:59,523 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 17:25:59,526 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 17:26:46,847 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:27:02,504 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:27:45,469 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:27:56,205 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:28:21,824 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:30:07,102 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:30:13,756 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "HRcJvByMllnInm4E7k4xm8q1kaguIZ1X", 
+    "mch_id": "1369038602", 
+    "sign": "2D25FBE25C1312AEC155B893EFCD9DC5", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 17:30:13,757 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[HRcJvByMllnInm4E7k4xm8q1kaguIZ1X]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[2D25FBE25C1312AEC155B893EFCD9DC5]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 17:30:13,990 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 17:30:13,993 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 17:47:12,495 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:47:18,896 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "EzHTLi7e2JRu8vGobwzhRxsAmn9JJXsd", 
+    "mch_id": "1369038602", 
+    "sign": "782EDD067E28194539A13354680BEBDC", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 17:47:18,897 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[EzHTLi7e2JRu8vGobwzhRxsAmn9JJXsd]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[782EDD067E28194539A13354680BEBDC]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 17:47:19,165 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 17:47:19,167 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 17:47:22,535 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:47:28,792 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "fvt1K0T8vVBfr8b4rL0UpZo4k5kzatRx", 
+    "mch_id": "1369038602", 
+    "sign": "16DFEDF1BA170EB7CE1FF27C05EBF6DB", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 17:47:28,793 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[fvt1K0T8vVBfr8b4rL0UpZo4k5kzatRx]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[16DFEDF1BA170EB7CE1FF27C05EBF6DB]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 17:47:29,070 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 17:47:29,073 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 17:49:03,903 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:49:09,108 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "s0xwbzgW3hF6mbfF1R17YGGFzGrxqCMe", 
+    "mch_id": "1369038602", 
+    "sign": "3AFB630D01F1E505CA4114568C786EB8", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 17:49:09,110 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[s0xwbzgW3hF6mbfF1R17YGGFzGrxqCMe]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[3AFB630D01F1E505CA4114568C786EB8]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 17:49:09,441 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 17:49:09,442 - app - File: weixin.py - line: 504 - order_unified() - INFO - u'<xml><return_code><![CDATA[FAIL]]></return_code>\n<return_msg><![CDATA[\u7b7e\u540d\u9519\u8bef]]></return_msg>\n</xml>'
+2016-07-29 17:53:29,245 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:53:36,206 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "mJ2KK0lWgKs5Mj885tIVvvxhjUbyepOG", 
+    "mch_id": "1369038602", 
+    "sign": "349B2DB05E6016F1398A9F80B3F41E9E", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 17:53:36,207 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[mJ2KK0lWgKs5Mj885tIVvvxhjUbyepOG]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[349B2DB05E6016F1398A9F80B3F41E9E]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 17:53:36,454 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 17:54:21,594 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:54:26,764 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "D3rQM1SLxdCWNPlfsuiYfIJPPUe4nsxm", 
+    "mch_id": "1369038602", 
+    "sign": "64D098A3D817CB0222DE879C8FD2BB90", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 17:54:26,765 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[D3rQM1SLxdCWNPlfsuiYfIJPPUe4nsxm]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[64D098A3D817CB0222DE879C8FD2BB90]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 17:54:27,198 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 17:55:42,570 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 17:56:02,628 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "LiFHGo1dxqpTN1wD0ajJKn3yrVitF6dE", 
+    "mch_id": "1369038602", 
+    "sign": "5D27365EBB8467B8A7E7D16F4D6D422F", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 17:56:02,629 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[LiFHGo1dxqpTN1wD0ajJKn3yrVitF6dE]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[5D27365EBB8467B8A7E7D16F4D6D422F]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 17:56:02,927 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 18:06:27,669 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:06:32,741 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "6CBIhBOEkOGFyhMP2x6g1BD9HRj7hPDJ", 
+    "mch_id": "1369038602", 
+    "sign": "9F42B83C840047E8265C576C7EC52A1C", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 18:06:32,742 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[6CBIhBOEkOGFyhMP2x6g1BD9HRj7hPDJ]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[9F42B83C840047E8265C576C7EC52A1C]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 18:06:32,987 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 18:12:51,948 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:12:56,482 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "GwZMs9Y5RKhJovAIYdtKWIOUtQcLroH9", 
+    "mch_id": "1369038602", 
+    "sign": "4F3C36F8EE9F5951F79463C53CC0880B", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 18:12:56,483 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[GwZMs9Y5RKhJovAIYdtKWIOUtQcLroH9]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[4F3C36F8EE9F5951F79463C53CC0880B]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 18:12:56,739 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[签名错误]]></return_msg>
+</xml>
+2016-07-29 18:32:12,213 - app - File: weixin.py - line: 276 - get_openid_access_token() - INFO - {"access_token": "xIJMrnUzlemVaiueSE7KMw6MfoHMSXjow9aZKUu-lBnVYaThnxLp2_sH_9X9Ovt2YAlW6JlYQB0fA-VRNcSCHi83jMWBpIAfViPw2uwiMIM", "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "expires_in": 7200, "refresh_token": "Dhf0gFGpH6LUt-fQx50jZyZiGJ-aMNundq62Vl7nTIxdUekeUSfb11fmWPbmFCk9f4Hod4mIr2Hx3mVi4G2Q-RcDyVaLEOLsHnWTbvaI6Xo", "scope": "snsapi_base"}
+2016-07-29 18:32:12,523 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:32:17,705 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "test", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "ru2szRoaC5M2Bq9mjDsb4yqLlD2jxMr1", 
+    "mch_id": "1369038602", 
+    "sign": "A57E2FE66594ACDB57925B8ACE33BDED", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO001sdfsdfsdfsdf", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 18:32:17,705 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[test]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[ru2szRoaC5M2Bq9mjDsb4yqLlD2jxMr1]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[A57E2FE66594ACDB57925B8ACE33BDED]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO001sdfsdfsdfsdf]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 18:32:18,026 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[KGixY08rAmAv9L6e]]></nonce_str>
+<sign><![CDATA[B9F2C1AC2164FBACE5A1DD3D079D3A48]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729183217e8fbb5842b0980658272]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 18:32:18,031 - app - File: weixin.py - line: 514 - order_unified() - INFO - {"trade_type": "JSAPI", "prepay_id": "wx20160729183217e8fbb5842b0980658272", "nonce_str": "KGixY08rAmAv9L6e", "device_info": "WEB", "return_msg": "OK", "return_code": "SUCCESS", "mch_id": "1369038602", "appid": "wxa679229655ae5be3", "result_code": "SUCCESS"}
+2016-07-29 18:38:29,537 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:38:38,078 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "mCGo2FzDy9RnLb2afi06EvazVKlQqfCZ", 
+    "mch_id": "1369038602", 
+    "sign": "7A6A1B038C7D437C208A2C8595F22FA0", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011469788709.54", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 18:38:38,091 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[mCGo2FzDy9RnLb2afi06EvazVKlQqfCZ]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[7A6A1B038C7D437C208A2C8595F22FA0]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011469788709.54]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 18:38:38,363 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid out_trade_no]]></return_msg>
+</xml>
+2016-07-29 18:40:17,808 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:40:23,048 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "tlGQ0P0Kje1KaIRXAjnY6SWZMmaUQPlB", 
+    "mch_id": "1369038602", 
+    "sign": "69B7AC8E6D0C55E09C4A7E8C207741EC", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO0011.46978881781e+12", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 18:40:23,049 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[tlGQ0P0Kje1KaIRXAjnY6SWZMmaUQPlB]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[69B7AC8E6D0C55E09C4A7E8C207741EC]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO0011.46978881781e+12]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 18:40:23,338 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid out_trade_no]]></return_msg>
+</xml>
+2016-07-29 18:44:30,319 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:44:35,830 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "MLqBWsp2JZp1NeGKL0QsMXJqGUiOfEUR", 
+    "mch_id": "1369038602", 
+    "sign": "2A67937FBA6E4D733EAF114B1D37D0F3", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729184430", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 18:44:35,831 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[MLqBWsp2JZp1NeGKL0QsMXJqGUiOfEUR]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[2A67937FBA6E4D733EAF114B1D37D0F3]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729184430]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 18:44:36,151 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[7RQq4KRTiJAUGoW6]]></nonce_str>
+<sign><![CDATA[697A4035343C338AAA1CD33233DD07B2]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2016072918443699e16a4eff0179657727]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 18:44:36,190 - app - File: weixin.py - line: 514 - order_unified() - INFO - {"trade_type": "JSAPI", "prepay_id": "wx2016072918443699e16a4eff0179657727", "nonce_str": "7RQq4KRTiJAUGoW6", "device_info": "WEB", "return_msg": "OK", "return_code": "SUCCESS", "mch_id": "1369038602", "appid": "wxa679229655ae5be3", "result_code": "SUCCESS"}
+2016-07-29 18:50:03,717 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:50:14,274 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:52:08,824 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:53:01,887 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:54:34,338 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:54:42,999 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:54:48,844 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 18:57:35,174 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:04:26,110 - app - File: weixin.py - line: 276 - get_openid_access_token() - INFO - {"access_token": "MbYuZLOX7_ZXUNjwVHjtNhWA4l7vR5t47jOjuWEBi-1jSUza1apPjMh1zA-qI-eFfXwoqwtltSASSxN2Au2wZ8nsuqL6jxV0T8n7YWI1lR8", "openid": "oGFpJw2LQt1Kun0k7WE5ayO7g0Gg", "expires_in": 7200, "refresh_token": "lNdlcj-aZro9oV0arV5Zum_U0llJL2uqhRItJLcoYZ4V5yzvkej7ZTspZN9t-77630PK53yfFJacl_TX5gC504Lg1DQp3828H3FRrYEl1-8", "scope": "snsapi_base"}
+2016-07-29 19:04:26,540 - app - File: demo_01.py - line: 49 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:04:39,670 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:05:47,812 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:06:01,929 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:06:24,484 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:06:40,046 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:07:02,732 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:07:40,668 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:07:51,768 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:08:11,934 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:08:28,680 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:08:50,797 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:16:04,830 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:17:15,093 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:17:26,537 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "RAfx6IPinHVbXD4nwBzpyU8P02GHCB9V", 
+    "mch_id": "1369038602", 
+    "sign": "F28BC0568C2293542B1E9BA51E5F1641", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729191715", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 19:17:26,538 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[RAfx6IPinHVbXD4nwBzpyU8P02GHCB9V]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[F28BC0568C2293542B1E9BA51E5F1641]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729191715]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 19:17:27,225 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[vuiO5Ef8kudWHTQF]]></nonce_str>
+<sign><![CDATA[4FA0C0C4B98AC0C150C0FD00BF4BFBB6]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729191727b2faffa2210651011805]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 19:17:27,305 - app - File: weixin.py - line: 514 - order_unified() - INFO - {"trade_type": "JSAPI", "prepay_id": "wx20160729191727b2faffa2210651011805", "nonce_str": "vuiO5Ef8kudWHTQF", "device_info": "WEB", "return_msg": "OK", "return_code": "SUCCESS", "mch_id": "1369038602", "appid": "wxa679229655ae5be3", "result_code": "SUCCESS"}
+2016-07-29 19:18:12,918 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:18:45,243 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:18:56,899 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "Y19sbqQ30Sh0MojIxMRaU8nCDbkE1llV", 
+    "mch_id": "1369038602", 
+    "sign": "ED6346795FB2314336B0E9B76A32546F", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729191845", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 19:18:56,900 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[Y19sbqQ30Sh0MojIxMRaU8nCDbkE1llV]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[ED6346795FB2314336B0E9B76A32546F]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729191845]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 19:18:57,199 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[yrsxrLFs7vQoDqJU]]></nonce_str>
+<sign><![CDATA[B7B4DAAB0BC6FC301F69EE307C8BB444]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729191857c3b6cff5ef0914156138]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 19:18:57,204 - app - File: weixin.py - line: 514 - order_unified() - INFO - {"trade_type": "JSAPI", "prepay_id": "wx20160729191857c3b6cff5ef0914156138", "nonce_str": "yrsxrLFs7vQoDqJU", "device_info": "WEB", "return_msg": "OK", "return_code": "SUCCESS", "mch_id": "1369038602", "appid": "wxa679229655ae5be3", "result_code": "SUCCESS"}
+2016-07-29 19:21:20,533 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 19:21:24,921 - app - File: weixin.py - line: 497 - order_unified() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "gsa7dv8ZHyF2uAVhtVw6Vfd6lvGVuqaO", 
+    "mch_id": "1369038602", 
+    "sign": "6F5CBA199F11ECE38ACAFCE8752BA68E", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729192120", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 19:21:24,923 - app - File: weixin.py - line: 499 - order_unified() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[gsa7dv8ZHyF2uAVhtVw6Vfd6lvGVuqaO]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[6F5CBA199F11ECE38ACAFCE8752BA68E]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729192120]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 19:21:25,260 - app - File: weixin.py - line: 503 - order_unified() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[I2xP2bFrKNfGCbJG]]></nonce_str>
+<sign><![CDATA[201C55AC7A3C997A5DCD1AEFAADD80F6]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729192125869ff09fa00914743601]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 19:21:25,263 - app - File: weixin.py - line: 514 - order_unified() - INFO - {"trade_type": "JSAPI", "prepay_id": "wx20160729192125869ff09fa00914743601", "nonce_str": "I2xP2bFrKNfGCbJG", "device_info": "WEB", "return_msg": "OK", "return_code": "SUCCESS", "mch_id": "1369038602", "appid": "wxa679229655ae5be3", "result_code": "SUCCESS"}
+2016-07-29 20:24:28,083 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:24:34,420 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "UyY74CXhmIgbhfdAF7xV4Z3A4ISu2WlZ", 
+    "mch_id": "1369038602", 
+    "sign": "8081DCC6FEDC96A786FA33819771F7DB", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729202428", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:24:34,421 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[UyY74CXhmIgbhfdAF7xV4Z3A4ISu2WlZ]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[8081DCC6FEDC96A786FA33819771F7DB]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729202428]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:24:34,931 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[DfrHsR1m6vjITV43]]></nonce_str>
+<sign><![CDATA[DD6496A354769E8ED7BF5C0D3AA4196F]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729202434a7b07b97e80383479153]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:24:34,992 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx20160729202434a7b07b97e80383479153", 
+    "nonce_str": "DfrHsR1m6vjITV43", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:26:40,009 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:26:45,152 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "4vhhPNJJ2rccULCXZhCbYTdPRq1cnA1e", 
+    "mch_id": "1369038602", 
+    "sign": "298C357B9CDF76C9C63706B05C6171D5", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729202640", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:26:45,153 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[4vhhPNJJ2rccULCXZhCbYTdPRq1cnA1e]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[298C357B9CDF76C9C63706B05C6171D5]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729202640]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:26:45,514 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[jQjR0aWqM5P4IMi5]]></nonce_str>
+<sign><![CDATA[DCD02BABFC59F44B4BC250DFC3E743EB]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201607292026452c142ece7c0859593497]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:26:45,517 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx201607292026452c142ece7c0859593497", 
+    "nonce_str": "jQjR0aWqM5P4IMi5", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:28:22,911 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:28:27,601 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "ZcIwv6C5nYNUp1ZjAIIOGNr6XTV2jRxQ", 
+    "mch_id": "1369038602", 
+    "sign": "7D80201342E187F6AD23F2D56055240C", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729202822", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:28:27,602 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[ZcIwv6C5nYNUp1ZjAIIOGNr6XTV2jRxQ]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[7D80201342E187F6AD23F2D56055240C]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729202822]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:28:27,877 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[szsMWzUuE1iaoOPb]]></nonce_str>
+<sign><![CDATA[DF34A7CF9A22A3B55A506E74DB48D3B1]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729202827f99c9e0d0c0413890258]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:28:27,879 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx20160729202827f99c9e0d0c0413890258", 
+    "nonce_str": "szsMWzUuE1iaoOPb", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:29:04,707 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:29:08,836 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "aflcDsLIKnGimNcT9zYNODLDWIs6iYgj", 
+    "mch_id": "1369038602", 
+    "sign": "274ADFE9DCDF024B39E29A028F259D84", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729202904", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:29:08,837 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[aflcDsLIKnGimNcT9zYNODLDWIs6iYgj]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[274ADFE9DCDF024B39E29A028F259D84]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729202904]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:29:09,135 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[UuLBDMQdJyzr55V5]]></nonce_str>
+<sign><![CDATA[7ABD3872F0F8FCB6A2A6476E141AAA87]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2016072920290968ee3231d10513038416]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:29:09,138 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx2016072920290968ee3231d10513038416", 
+    "nonce_str": "UuLBDMQdJyzr55V5", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:50:17,953 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:50:23,059 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "wd8Uq2FgQ1qfyIoF8zhUfzA1IhemfFZH", 
+    "mch_id": "1369038602", 
+    "sign": "E96C6771AA7878217A0316E3AB45C60D", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729205017", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:50:23,060 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[wd8Uq2FgQ1qfyIoF8zhUfzA1IhemfFZH]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[E96C6771AA7878217A0316E3AB45C60D]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729205017]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:50:23,378 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[HS3xU5c6aIXsF0vT]]></nonce_str>
+<sign><![CDATA[23E3772AFB75D03DAF280A3D09AF0BFA]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729205023ce835388a10581359880]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:50:23,381 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx20160729205023ce835388a10581359880", 
+    "nonce_str": "HS3xU5c6aIXsF0vT", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:51:50,668 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:51:55,021 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "oX7MuluCjHccOdrgDLnhGgklWKyF9P6q", 
+    "mch_id": "1369038602", 
+    "sign": "02CD193AA8F8A0C0F9A36808789337FB", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729205150", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:51:55,023 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[oX7MuluCjHccOdrgDLnhGgklWKyF9P6q]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[02CD193AA8F8A0C0F9A36808789337FB]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729205150]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:51:55,336 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[bWissBHQl5qIx7Tj]]></nonce_str>
+<sign><![CDATA[D54C1650043D8FB34CA55DD77ED6C9E3]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729205155f23627cf560034678772]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:51:55,339 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx20160729205155f23627cf560034678772", 
+    "nonce_str": "bWissBHQl5qIx7Tj", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:53:09,687 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:53:13,848 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "omKs6U8xARFjrSoH2d6kUXYZySeF2TGK", 
+    "mch_id": "1369038602", 
+    "sign": "A94FBED4B92318D19BD441BBD11F5DA3", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729205309", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:53:13,850 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[omKs6U8xARFjrSoH2d6kUXYZySeF2TGK]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[A94FBED4B92318D19BD441BBD11F5DA3]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729205309]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:53:14,146 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[yYOOq38S85ePJpbZ]]></nonce_str>
+<sign><![CDATA[F6FB19709ACE92C22B7718FF47E6DD2F]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729205314b322565eb10271325586]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:53:14,148 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx20160729205314b322565eb10271325586", 
+    "nonce_str": "yYOOq38S85ePJpbZ", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:53:36,354 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:53:40,661 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "rsNH3ZwbWCGBHpcS5SQvbde85w3TOkeX", 
+    "mch_id": "1369038602", 
+    "sign": "D766CA2653F3B2FDB8BDE843B62C84C5", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729205336", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:53:40,662 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[rsNH3ZwbWCGBHpcS5SQvbde85w3TOkeX]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[D766CA2653F3B2FDB8BDE843B62C84C5]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729205336]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:53:40,961 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[Wh8NLawxKJbJrbJa]]></nonce_str>
+<sign><![CDATA[D3238BF342D2622A45FE65FC9F6457C1]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201607292053405ae5a4ffe70864309325]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:53:40,964 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx201607292053405ae5a4ffe70864309325", 
+    "nonce_str": "Wh8NLawxKJbJrbJa", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:54:13,424 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:54:17,359 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "2RtVL8827B4oH6QQptSl43fjrUq94HF0", 
+    "mch_id": "1369038602", 
+    "sign": "2BF5B73C3B6D1AAC7D11435A99BD5231", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729205413", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:54:17,360 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[2RtVL8827B4oH6QQptSl43fjrUq94HF0]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[2BF5B73C3B6D1AAC7D11435A99BD5231]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729205413]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:54:17,639 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[7U8btLBadB0YnYbf]]></nonce_str>
+<sign><![CDATA[44C3301696977B1D32FE313BCE727049]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201607292054176e22682fe60570355492]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:54:17,641 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx201607292054176e22682fe60570355492", 
+    "nonce_str": "7U8btLBadB0YnYbf", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:55:25,305 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:55:29,953 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "RLO0Oe8qw2nk01WFFJcILTuKu8aHgEdq", 
+    "mch_id": "1369038602", 
+    "sign": "7FA12EED77EB3D5654901DC103758FB7", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729205525", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:55:29,954 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[RLO0Oe8qw2nk01WFFJcILTuKu8aHgEdq]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[7FA12EED77EB3D5654901DC103758FB7]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729205525]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:55:30,258 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[9pehIViK0Umkxsn7]]></nonce_str>
+<sign><![CDATA[EE5A744ED48A175B35D63B23F90A4BBD]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729205530297f2bbb630974369895]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:55:30,261 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx20160729205530297f2bbb630974369895", 
+    "nonce_str": "9pehIViK0Umkxsn7", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:56:14,579 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:56:19,140 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "l0B582OiKRKhjGPJ3IKcnnRzpGhVhohJ", 
+    "mch_id": "1369038602", 
+    "sign": "02543C636F92F5F6B33C2FB9F9ECF771", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729205614", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:56:19,141 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[l0B582OiKRKhjGPJ3IKcnnRzpGhVhohJ]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[02543C636F92F5F6B33C2FB9F9ECF771]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729205614]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:56:19,432 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[aB0PMimnqF0EE2iF]]></nonce_str>
+<sign><![CDATA[ECFD660D516338EF6585E9102994CDA1]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729205619d385717dea0050138759]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:56:19,434 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx20160729205619d385717dea0050138759", 
+    "nonce_str": "aB0PMimnqF0EE2iF", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:56:34,105 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:56:37,961 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "gOImJk8g12NquLhGQt6kCVmN7H9NOHBb", 
+    "mch_id": "1369038602", 
+    "sign": "8E241F99EACAA7720E34DE2B657400DD", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729205634", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:56:37,962 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[gOImJk8g12NquLhGQt6kCVmN7H9NOHBb]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[8E241F99EACAA7720E34DE2B657400DD]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729205634]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:56:38,321 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[HdReQoDDYm3gGI8B]]></nonce_str>
+<sign><![CDATA[52E7279DA6B317A91F790C36EEC9F852]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2016072920563812bea1a2850025095454]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:56:38,324 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx2016072920563812bea1a2850025095454", 
+    "nonce_str": "HdReQoDDYm3gGI8B", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 20:58:19,897 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 20:58:24,446 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "2LqHAvBcg0fTxjJykTxOnSo2FwUPoH5t", 
+    "mch_id": "1369038602", 
+    "sign": "CC653B41BF29F53AB6AB81779C39D294", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729205819", 
+    "total_fee": "10000", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 20:58:24,447 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[2LqHAvBcg0fTxjJykTxOnSo2FwUPoH5t]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[CC653B41BF29F53AB6AB81779C39D294]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729205819]]></out_trade_no><total_fee>10000</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 20:58:24,711 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[301BESvADDzrbcBf]]></nonce_str>
+<sign><![CDATA[0A47CBA2D752DEC4E3D8FB4EF33CE1BA]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729205824f8425166290305912353]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 20:58:24,714 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx20160729205824f8425166290305912353", 
+    "nonce_str": "301BESvADDzrbcBf", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 21:02:11,762 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 21:02:17,236 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "Ie8XYrzsxxjmBdD9AXPy1AqVCyRA1Hgb", 
+    "mch_id": "1369038602", 
+    "sign": "1A666C88122DB9D1BA3FC476D3D18640", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729210211", 
+    "total_fee": "1", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 21:02:17,237 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[Ie8XYrzsxxjmBdD9AXPy1AqVCyRA1Hgb]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[1A666C88122DB9D1BA3FC476D3D18640]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729210211]]></out_trade_no><total_fee>1</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 21:02:17,598 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[Fx2MnM8HeYqWXUzz]]></nonce_str>
+<sign><![CDATA[318F4969922D92CD6B04D04F8B9E02C0]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160729210217d593ea08610652641860]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 21:02:17,638 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx20160729210217d593ea08610652641860", 
+    "nonce_str": "Fx2MnM8HeYqWXUzz", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 21:11:22,313 - app - File: demo_01.py - line: 50 - order() - INFO - http://192.168.2.32:5000/demo/01/order/
+2016-07-29 21:11:26,847 - app - File: wechat.py - line: 252 - get_prepay_id() - INFO - {
+    "body": "测试订单", 
+    "openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", 
+    "trade_type": "JSAPI", 
+    "nonce_str": "UWWQrq1KKpzo0PsSmpINYrILmELbRuY7", 
+    "mch_id": "1369038602", 
+    "sign": "D2C5A2895521B88B1101C5438DE57C4C", 
+    "attach": "testattach", 
+    "device_info": "WEB", 
+    "out_trade_no": "PO00120160729211122", 
+    "total_fee": "1", 
+    "appid": "wxa679229655ae5be3", 
+    "notify_url": "http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback", 
+    "spbill_create_ip": "101.231.185.66"
+}
+2016-07-29 21:11:26,849 - app - File: wechat.py - line: 254 - get_prepay_id() - INFO - <xml><body><![CDATA[测试订单]]></body><openid><![CDATA[oGFpJw2sxvsfck-d-XpEtmy01CyY]]></openid><trade_type><![CDATA[JSAPI]]></trade_type><nonce_str><![CDATA[UWWQrq1KKpzo0PsSmpINYrILmELbRuY7]]></nonce_str><mch_id>1369038602</mch_id><sign><![CDATA[D2C5A2895521B88B1101C5438DE57C4C]]></sign><attach><![CDATA[testattach]]></attach><device_info><![CDATA[WEB]]></device_info><out_trade_no><![CDATA[PO00120160729211122]]></out_trade_no><total_fee>1</total_fee><appid><![CDATA[wxa679229655ae5be3]]></appid><notify_url><![CDATA[http://gwm.91shixing.com/_gwm/zhanghe/weixin/pay_notify_callback]]></notify_url><spbill_create_ip><![CDATA[101.231.185.66]]></spbill_create_ip></xml>
+2016-07-29 21:11:27,208 - app - File: wechat.py - line: 258 - get_prepay_id() - INFO - <xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxa679229655ae5be3]]></appid>
+<mch_id><![CDATA[1369038602]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[Tk1vx9LbewLf4zYr]]></nonce_str>
+<sign><![CDATA[633B3632CBAB9D3564B54268F1FAFA72]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2016072921112700b38c53260792824671]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+2016-07-29 21:11:27,214 - app - File: wechat.py - line: 268 - get_prepay_id() - INFO - {
+    "trade_type": "JSAPI", 
+    "prepay_id": "wx2016072921112700b38c53260792824671", 
+    "nonce_str": "Tk1vx9LbewLf4zYr", 
+    "device_info": "WEB", 
+    "return_msg": "OK", 
+    "return_code": "SUCCESS", 
+    "mch_id": "1369038602", 
+    "appid": "wxa679229655ae5be3", 
+    "result_code": "SUCCESS"
+}
+2016-07-29 21:11:34,774 - app - File: weixin.py - line: 564 - pay_notify_callback() - INFO - {"openid": "oGFpJw2sxvsfck-d-XpEtmy01CyY", "trade_type": "JSAPI", "mch_id": "1369038602", "total_fee": "1", "return_code": "SUCCESS", "nonce_str": "UWWQrq1KKpzo0PsSmpINYrILmELbRuY7", "is_subscribe": "Y", "fee_type": "CNY", "bank_type": "CFT", "attach": "testattach", "device_info": "WEB", "out_trade_no": "PO00120160729211122", "transaction_id": "4007892001201607290072445836", "time_end": "20160729211134", "appid": "wxa679229655ae5be3", "sign": "6FA046376215A7CB18221FB1A0BD84BE", "cash_fee": "1", "result_code": "SUCCESS"}

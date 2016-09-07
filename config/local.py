@@ -62,6 +62,15 @@ ADMINS = ['455091702@qq.com']
 # 微信公众平台配置
 APPID = 'wx1cf9245f9f2cc40e'
 APPSECRET = 'd4624c36b6795d1d99dcf0547af5443d'
+MCHID = ''  # 微信支付分配的商户号
+WECHAT_PAY_KEY = 'e10adc3949ba59abbe56e057f20f883e'  # 商户支付密钥(32位)，（必须配置，登录商户平台自行设置）设置地址：https://pay.weixin.qq.com/index.php/account/api_cert
+WECHAT_URL = 'http://zhanghe.ngrok.cc/weixin/callback'  # 服务器地址 需要正确响应微信发送的Token验证 必须以http://或https://开头，分别支持80端口和443端口
+WECHAT_TOKEN = 'wechat_token'  # 令牌 必须为英文或数字，长度为3-32字符
+WECHAT_NOTIFY_URL = 'http://zhanghe.ngrok.cc/weixin/pay_notify_callback'  # 异步通知url
+TIMEOUT = 30
+SSLCERT_PATH = BASE_DIR + '/cert/apiclient_cert.pem'
+SSLKEY_PATH = BASE_DIR + '/cert/apiclient_key.pem'
+
 
 # sendcloud 邮件发送平台
 SENDCLOUD_API_USER = 'zhang_he_test_w6kIMK'
@@ -132,14 +141,14 @@ LOG_CONFIG = {
             'formatter': 'detail',
             'level': 'DEBUG',
             'when': 'D',
-            'filename': BASE_DIR + '/log/app.log'
+            'filename': BASE_DIR + '/logs/app.log'
         },
         'file_db': {
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'formatter': 'detail',
             'level': 'DEBUG',
             'when': 'D',
-            'filename': BASE_DIR + '/log/db.log'
+            'filename': BASE_DIR + '/logs/db.log'
         }
     },
     'loggers': {
@@ -165,3 +174,4 @@ if __name__ == '__main__':
     print BASE_DIR
     print UPLOAD_FOLDER
     print SQLALCHEMY_DATABASE_URI
+    print SSLKEY_PATH

@@ -1,0 +1,190 @@
+{% extends "demo_01/layout.html" %}
+
+{% block title -%}
+    简单示例
+{%- endblock %}
+
+{% block extra_css -%}
+    <!-- 触摸滑动插件 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}">
+    <style>
+        body {
+            /*padding-top:44px;*/ /*消除顶部浮动固定导致页面顶部遮盖*/
+            padding-bottom: 75px; /*消除底部浮动固定导致页面底部遮盖*/
+        }
+        .swiper-container {
+            width: 100%;
+            height: 240px;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
+{%- endblock %}
+
+{% block content -%}
+<!-- 主体页面 -->
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img data-src="{{ url_for('static', filename='imgs/car.jpg') }}" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="{{ url_for('static', filename='imgs/car.jpg') }}" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="{{ url_for('static', filename='imgs/car.jpg') }}" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="{{ url_for('static', filename='imgs/car.jpg') }}" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="{{ url_for('static', filename='imgs/car.jpg') }}" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+            <div class="swiper-slide">
+                <img data-src="{{ url_for('static', filename='imgs/car.jpg') }}" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">qq</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="tel" placeholder="请输入qq号">
+            </div>
+        </div>
+        <div class="weui_cell weui_vcode">
+            <div class="weui_cell_hd"><label class="weui_label">验证码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="number" placeholder="请输入验证码">
+            </div>
+            <div class="weui_cell_ft">
+                <img src="{{ url_for('static', filename='node_modules/jquery-weui/dist/demos/images/vcode.jpg') }}">
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_switch">
+            <div class="weui_cell_hd weui_cell_primary">接受通知</div>
+            <div class="weui_cell_ft">
+                <input class="weui_switch" type="checkbox">
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">日期</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="date" value="">
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label for="" class="weui_label">时间</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="datetime-local" value="" placeholder="">
+            </div>
+        </div>
+        <div class="weui_cell weui_cell_select">
+            <div class="weui_cell_bd weui_cell_primary">
+                <select class="weui_select" name="select1">
+                    <option selected="" value="0">选择</option>
+                    <option value="1">微信号</option>
+                    <option value="2">QQ号</option>
+                    <option value="3">Email</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="weui_cells_title">文本域</div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <textarea class="weui_textarea" placeholder="请输入评论" rows="3"></textarea>
+                <div class="weui_textarea_counter"><span>0</span>/200</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <div class="weui_uploader">
+                    <div class="weui_uploader_hd weui_cell">
+                        <div class="weui_cell_bd weui_cell_primary">图片上传</div>
+                        <div class="weui_cell_ft">0/2</div>
+                    </div>
+                    <div class="weui_uploader_bd">
+                        <ul class="weui_uploader_files">
+                            <li class="weui_uploader_file"
+                                style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                            <li class="weui_uploader_file"
+                                style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                            <li class="weui_uploader_file"
+                                style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                            <li class="weui_uploader_file weui_uploader_status"
+                                style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                <div class="weui_uploader_status_content">
+                                    <i class="weui_icon_warn"></i>
+                                </div>
+                            </li>
+                            <li class="weui_uploader_file weui_uploader_status"
+                                style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                <div class="weui_uploader_status_content">50%</div>
+                            </li>
+                        </ul>
+                        <div class="weui_uploader_input_wrp">
+                            <input class="weui_uploader_input" type="file" accept="image/jpg,image/jpeg,image/png,image/gif"
+                                   multiple="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%- endblock %}
+
+{% block extra_js -%}
+<!-- 触摸滑动插件 -->
+<script src="{{ url_for('static', filename='js/swiper.jquery.min.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false,
+            lazyLoading: true,
+            loop: true
+        });
+    });
+</script>
+{%- endblock %}

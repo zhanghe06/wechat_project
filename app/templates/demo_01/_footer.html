@@ -1,34 +1,36 @@
 <div class="weui_grids" style="position: fixed; bottom:0; width: 100%; background-color: #ffffff; z-index: 2">
-    <a id="slide_01" href="javascript:;" class="weui_grid js_grid" data-id="button" style="width: 25%; padding: 10px">
+    <a id="slide_01" href="{{ url_for('demo_01.home') }}" class="weui_grid js_grid" data-id="button" style="width: 25%; padding: 10px">
         <div class="weui_grid_icon">
-            <img src="../../static/node_modules/jquery-weui/dist/demos/images/icon_nav_button.png" alt="">
+            <img src="{{ url_for('static', filename='node_modules/jquery-weui/dist/demos/images/icon_nav_button.png') }}" alt="">
         </div>
         <p class="weui_grid_label">
-            Button
+            Home
         </p>
     </a>
-    <a id="slide_02" href="javascript:;" class="weui_grid js_grid" data-id="cell" style="width: 25%; padding: 10px">
+    <a id="slide_02" href="{{ url_for('demo_01.search') }}" class="weui_grid js_grid" data-id="cell" style="width: 25%; padding: 10px">
         <div class="weui_grid_icon">
-            <img src="../../static/node_modules/jquery-weui/dist/demos/images/icon_nav_cell.png" alt="">
+            <img src="{{ url_for('static', filename='node_modules/jquery-weui/dist/demos/images/icon_nav_cell.png') }}" alt="">
         </div>
         <p class="weui_grid_label">
-            Cell
+            Search
         </p>
     </a>
-    <a id="slide_03" href="javascript:;" class="weui_grid js_grid" data-id="dialog" style="width: 25%; padding: 10px">
+{#    <a id="slide_03" href="{{ url_for('demo_01.order') }}" class="weui_grid js_grid" data-id="dialog" style="width: 25%; padding: 10px">#}
+    <a id="slide_03" href="http://gwm.91shixing.com/_gwm/zhanghe/demo/01/order/" class="weui_grid js_grid" data-id="dialog" style="width: 25%; padding: 10px">
         <div class="weui_grid_icon">
-            <img src="../../static/node_modules/jquery-weui/dist/demos/images/icon_nav_dialog.png" alt="">
+            <img src="{{ url_for('static', filename='node_modules/jquery-weui/dist/demos/images/icon_nav_dialog.png') }}" alt="">
         </div>
         <p class="weui_grid_label">
-            Dialog
+            Order
         </p>
     </a>
-    <a id="slide_04" href="javascript:;" class="weui_grid js_grid" data-id="toast" style="width: 25%; padding: 10px">
+{#    <a id="slide_04" href="{{ url_for('demo_01.me') }}" class="weui_grid js_grid" data-id="toast" style="width: 25%; padding: 10px">#}
+    <a id="slide_04" href="http://gwm.91shixing.com/_gwm/zhanghe/demo/01/me/" class="weui_grid js_grid" data-id="toast" style="width: 25%; padding: 10px">
         <div class="weui_grid_icon">
-            <img src="../../static/node_modules/jquery-weui/dist/demos/images/icon_nav_toast.png" alt="">
+            <img src="{{ url_for('static', filename='node_modules/jquery-weui/dist/demos/images/icon_nav_toast.png') }}" alt="">
         </div>
         <p class="weui_grid_label">
-            Toast
+            Me
         </p>
     </a>
 </div>

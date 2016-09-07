@@ -48,3 +48,33 @@ weui 页面示例：[node_modules/weui/dist/example/index.html](node_modules/weu
 ✗ cd app/static
 ✗ npm install jquery-weui
 ```
+
+插件修改, 增加输入框原始参数显示
+node_modules/jquery-weui/dist/js/jquery-weui.js
+```
+  $.prompt = function(text, title, callbackOK, callbackCancel, inputValue, inputType) {
+    if (typeof title === 'function') {
+      callbackCancel = arguments[2];
+      callbackOK = arguments[1];
+      title = undefined;
+    }
+
+    return $.modal({
+      text: "<p class='weui-prompt-text'>"+(text || "")+"</p><input type='"+(inputType || "text")+"' class='weui_input weui-prompt-input' id='weui-prompt-input' value='"+(inputValue || "")+"'/>",
+      title: title,
+      buttons: [
+      {
+        text: defaults.buttonCancel,
+        className: "default",
+        onClick: callbackCancel
+      },
+      {
+        text: defaults.buttonOK,
+        className: "primary",
+        onClick: function() {
+          callbackOK && callbackOK($("#weui-prompt-input").val());
+        }
+      }]
+    });
+  };
+```
